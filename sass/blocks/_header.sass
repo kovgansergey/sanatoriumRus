@@ -1,6 +1,148 @@
 .header
-  padding: 25px 0
-// @media (max-width: 1199px)
-// @media (max-width: 991px)
-// @media (max-width: 767px)
+  position: relative
+  &-wrap
+    position: relative
+    display: flex
+    justify-content: space-between
+    padding: 25px 0
+  &-col
+    display: flex
+    align-items: center
+  &-order
+    display: flex
+    align-items: center
+    padding: 8px
+    width: 176px
+    height: 56px
+    background-color: #eff2f5
+    border-radius: 28px
+    &:first-child
+      margin-left: 25px
+      margin-right: 25px
+    &-wrap
+      display: flex
+    &__img
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-right: 15px
+      width: 40px
+      height: 40px
+      background-color: #fff
+      border-radius: 50%
+    &__text
+      font-size: 15px
+  &-phone
+    margin-left: 25px
+    font-size: 25px
+    font-weight: bold
+    &__free
+      position: relative
+      &::after
+        content: 'Бесплатный звонок'
+        position: absolute
+        top: 100%
+        right: 0
+        font-size: 21px
+        font-weight: normal
+.menu
+  padding: 22px 0
+  box-shadow: 0 4px 5px 1px rgba(0, 7, 5, 0.17)
+  background-color: #eff2f5
+  &__wrap
+    display: flex
+  &__link
+    margin-right: 20px
+    font-size: 17px
+    text-transform: uppercase
+  &-burger
+    display: none
+    justify-content: center
+    align-items: center
+    position: absolute
+    bottom: 45px
+    right: 10px
+    width: 40px
+    height: 40px
+    background-color: #eff2f5
+    border-radius: 50%
+    cursor: pointer
+    & span
+      position: relative
+      width: 20px
+      height: 2px
+      background-color: #000
+      transition: 0.2s
+      &::before,
+      &::after
+        content: ''
+        position: absolute
+        right: 0
+        width: 20px
+        height: 2px
+        background-color: #000
+        transition: 0.5s
+      &::before
+        top: -6px
+      &::after
+        bottom: -6px
+    &.active
+      & span
+        height: 0
+        &::before
+          top: -1px
+          transform: rotate(45deg)
+        &::after
+          bottom: -1px
+          transform: rotate(-45deg)
+@media (max-width: 1440px)
+  .header
+    &-col
+      &-phones
+        flex-direction: column
+    &-phone
+      margin-top: 20px
+      margin-left: 0
+@media (max-width: 991px)
+  .header
+    &-col
+      &-links
+        flex-direction: column
+        align-items: start
+    &-order
+      margin-top: 20px
+      &:first-child
+        margin-left: 0
+  .menu
+    position: absolute
+    top: 0
+    left: -100%
+    padding: 25px
+    transition: 0.5s
+    &__wrap
+      flex-direction: column
+      width: 100%
+    &__link
+      margin-right: 0
+      margin-bottom: 20px
+    &-burger
+      display: flex
+    &.active
+      left: 0
+@media (max-width: 767px)
+  .header
+    &-logo__img
+      width: 145px
+    &-order
+      &-wrap
+        flex-direction: column
+    &-phone
+      margin-top: 15px
+      font-size: 14px
+      &__free
+        &::after
+          font-size: 12px
+  .menu
+    &-burger
+      bottom: 115px
 // @media (max-width: 576px)
