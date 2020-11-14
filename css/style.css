@@ -44,6 +44,13 @@ a {
   background-color: #ffffff;
 }
 
+.booking-form-container {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .booking-form__title {
   font-size: 17px;
   text-transform: uppercase;
@@ -295,6 +302,7 @@ a {
     position: absolute;
     top: 0;
     left: -100%;
+    z-index: 2;
     padding: 25px;
     transition: 0.5s;
   }
@@ -331,8 +339,4 @@ a {
   .menu-burger {
     bottom: 115px;
   }
-}
-
-.index-main {
-  background-color: green;
 }
