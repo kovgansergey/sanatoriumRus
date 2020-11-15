@@ -50,6 +50,22 @@ a {
   height: 48px;
 }
 
+.title {
+  position: relative;
+  font-size: 25px;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  left: 35px;
+  bottom: 5px;
+  z-index: -1;
+  font-size: 35px;
+  text-transform: uppercase;
+  opacity: 0.11;
+}
+
 @media (min-width: 992px) {
   .btn:hover {
     background-color: #d55623;
@@ -75,6 +91,13 @@ a {
   .main-description {
     max-width: 450px;
     font-size: 19px;
+  }
+  .title {
+    font-size: 17px;
+  }
+  .title::after {
+    left: 20px;
+    font-size: 21px;
   }
 }
 
@@ -374,6 +397,20 @@ a {
   padding-top: 250px;
   padding-bottom: 365px;
   background: url(../img/index/main-bg.jpg) center/cover no-repeat;
+}
+
+.index-offer {
+  padding-top: 30px;
+  padding-bottom: 55px;
+}
+
+.index-offer__title::after {
+  content: 'ПРЕДЛОЖЕНИЯ СЕЗОНА';
+}
+
+.index-offer__all-offers {
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 @media (max-width: 991px) {

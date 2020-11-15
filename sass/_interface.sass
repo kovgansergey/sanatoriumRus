@@ -25,6 +25,18 @@ a
 	&-btn
 		width: 233px
 		height: 48px
+.title
+	position: relative
+	font-size: 25px
+	&::after
+		content: ''
+		position: absolute
+		left: 35px
+		bottom: 5px
+		z-index: -1
+		font-size: 35px
+		text-transform: uppercase
+		opacity: 0.11
 @media (min-width: 992px)
 	.btn:hover
 		background-color: #d55623
@@ -42,6 +54,11 @@ a
 		&-description
 			max-width: 450px
 			font-size: 19px
+	.title
+		font-size: 17px
+		&::after
+			left: 20px
+			font-size: 21px
 @media (max-width: 767px)
 	.container
 		width: 540px
