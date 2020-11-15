@@ -95,6 +95,48 @@
         &::after
           bottom: -1px
           transform: rotate(-45deg)
+.booking-form
+	padding: 5px 30px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	border-radius: 10px
+	background-color: #eff2f5
+	&-container
+		position: absolute
+		top: calc(100% + 15px)
+		left: 50%
+		transform: translateX(-50%)
+	&__title
+		text-transform: uppercase
+	&__label
+		margin-right: 5px
+		background-color: transparent
+	&__input
+		width: 100%
+		font-weight: bold
+		background-color: transparent
+		border: none
+		outline: none
+		&-block
+			display: flex
+			align-items: center
+			padding: 8px 20px
+			width: 372px
+			height: 40px
+			font-size: 15px
+			background-color: #ffffff
+	&__btn
+		width: 258px
+		height: 40px
+.booking-form-container--invert
+  & .booking-form
+    background-color: #fff
+    &__input-block
+      background-color: #eff2f5
+::-webkit-calendar-picker-indicator
+		background: url('../img/interface/calendar-icon.png') no-repeat center
+		outline: none
 @media (max-width: 1440px)
   .header
     &-col
@@ -103,6 +145,12 @@
     &-phone
       margin-top: 20px
       margin-left: 0
+  .booking-form
+    &__input
+      &-block
+        width: 240px
+    &__btn
+      width: 190px
 @media (max-width: 991px)
   .header
     &-col
@@ -130,6 +178,14 @@
       display: flex
     &.active
       left: 0
+  .booking-form
+    flex-direction: column
+    &__input
+      &-block
+        margin-bottom: 10px
+        width: 100%
+    &__btn
+      width: 100%
 @media (max-width: 767px)
   .header
     &-logo__img

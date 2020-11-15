@@ -1,5 +1,10 @@
 "use strict";
 
+// инверсия цветов формы брони для index
+if (document.location.pathname === '/') {
+  document.querySelector('.booking-form-container').classList.add('booking-form-container--invert');
+}
+
 // скрипт изменения бургер-меню на мобильных экранах
 try {
   const menu = document.querySelector('.menu'),

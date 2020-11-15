@@ -14,6 +14,7 @@
 
 body {
   font-family: 'Circe Regular', sans-serif;
+  font-size: 17px;
 }
 
 a {
@@ -27,7 +28,6 @@ a {
 }
 
 .btn {
-  font-size: 17px;
   font-weight: bold;
   background-color: #f5652c;
   border: none;
@@ -35,58 +35,19 @@ a {
   cursor: pointer;
 }
 
-.booking-form {
-  padding: 5px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 10px;
-  background-color: #ffffff;
+.main-title {
+  font-size: 73px;
 }
 
-.booking-form-container {
-  position: absolute;
-  top: calc(100% + 15px);
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.booking-form__title {
-  font-size: 17px;
-  text-transform: uppercase;
-}
-
-.booking-form__label {
-  margin-right: 5px;
-  background-color: transparent;
-}
-
-.booking-form__input {
+.main-description {
   width: 100%;
-  font-weight: bold;
-  background-color: transparent;
-  border: none;
-  outline: none;
+  max-width: 700px;
+  font-size: 31px;
 }
 
-.booking-form__input-block {
-  display: flex;
-  align-items: center;
-  padding: 8px 20px;
-  width: 372px;
-  height: 40px;
-  font-size: 15px;
-  background-color: #eff2f5;
-}
-
-.booking-form__btn {
-  width: 258px;
-  height: 40px;
-}
-
-::-webkit-calendar-picker-indicator {
-  background: url("../img/interface/calendar-icon.png") no-repeat center;
-  outline: none;
+.main-btn {
+  width: 233px;
+  height: 48px;
 }
 
 @media (min-width: 992px) {
@@ -96,17 +57,11 @@ a {
 }
 
 @media (max-width: 1440px) {
-  .container {
-    width: 960px;
-  }
-  .booking-form__title {
+  body {
     font-size: 14px;
   }
-  .booking-form__input-block {
-    width: 240px;
-  }
-  .booking-form__btn {
-    width: 190px;
+  .container {
+    width: 960px;
   }
 }
 
@@ -114,15 +69,12 @@ a {
   .container {
     width: 720px;
   }
-  .booking-form {
-    flex-direction: column;
+  .main-title {
+    font-size: 31px;
   }
-  .booking-form__input-block {
-    margin-bottom: 10px;
-    width: 100%;
-  }
-  .booking-form__btn {
-    width: 100%;
+  .main-description {
+    max-width: 450px;
+    font-size: 19px;
   }
 }
 
@@ -277,6 +229,67 @@ a {
   transform: rotate(-45deg);
 }
 
+.booking-form {
+  padding: 5px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #eff2f5;
+}
+
+.booking-form-container {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.booking-form__title {
+  text-transform: uppercase;
+}
+
+.booking-form__label {
+  margin-right: 5px;
+  background-color: transparent;
+}
+
+.booking-form__input {
+  width: 100%;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.booking-form__input-block {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  width: 372px;
+  height: 40px;
+  font-size: 15px;
+  background-color: #ffffff;
+}
+
+.booking-form__btn {
+  width: 258px;
+  height: 40px;
+}
+
+.booking-form-container--invert .booking-form {
+  background-color: #fff;
+}
+
+.booking-form-container--invert .booking-form__input-block {
+  background-color: #eff2f5;
+}
+
+::-webkit-calendar-picker-indicator {
+  background: url("../img/interface/calendar-icon.png") no-repeat center;
+  outline: none;
+}
+
 @media (max-width: 1440px) {
   .header-col-phones {
     flex-direction: column;
@@ -284,6 +297,12 @@ a {
   .header-phone {
     margin-top: 20px;
     margin-left: 0;
+  }
+  .booking-form__input-block {
+    width: 240px;
+  }
+  .booking-form__btn {
+    width: 190px;
   }
 }
 
@@ -320,6 +339,16 @@ a {
   .menu.active {
     left: 0;
   }
+  .booking-form {
+    flex-direction: column;
+  }
+  .booking-form__input-block {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .booking-form__btn {
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -338,5 +367,18 @@ a {
   }
   .menu-burger {
     bottom: 115px;
+  }
+}
+
+.index-main {
+  padding-top: 250px;
+  padding-bottom: 365px;
+  background: url(../img/index/main-bg.jpg) center/cover no-repeat;
+}
+
+@media (max-width: 991px) {
+  .index-main {
+    padding-top: 210px;
+    padding-bottom: 170px;
   }
 }
