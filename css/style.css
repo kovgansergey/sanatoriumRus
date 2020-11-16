@@ -477,7 +477,7 @@ a {
 .index-about-us {
   padding-top: 50px;
   padding-bottom: 105px;
-  background: url(../img/index/index-about-us-bg.jpg) center/cover no-repeat;
+  background: url(../img/index/about-us-bg.jpg) center/cover no-repeat;
 }
 
 .index-about-us__title::after {
@@ -490,6 +490,28 @@ a {
   width: 100%;
   max-width: 680px;
   font-size: 24px;
+}
+
+.index-allergy {
+  padding-top: 80px;
+}
+
+.index-allergy-treatment {
+  padding-top: 230px;
+  padding-bottom: 120px;
+  background: url(../img/index/allergy-treatment-bg.jpg) center/cover no-repeat;
+}
+
+.index-allergy-treatment__title {
+  width: 100%;
+  max-width: 635px;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.index-allergy-treatment__btn {
+  width: 233px;
+  height: 48px;
 }
 
 @media (max-width: 991px) {
@@ -513,6 +535,17 @@ a {
     margin-top: 40px;
     max-width: 452px;
     font-size: 16px;
+  }
+  .index-allergy {
+    padding-top: 40px;
+  }
+  .index-allergy-treatment {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+  .index-allergy-treatment__title {
+    max-width: 370px;
+    font-size: 24px;
   }
 }
 
@@ -598,5 +631,50 @@ a {
   }
   .offer__subtitle {
     font-size: 16px;
+  }
+}
+
+.allergy-numbers {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.allergy-numbers__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 365px;
+  text-align: center;
+}
+
+.allergy-numbers__item-title {
+  position: relative;
+  width: auto;
+  font-size: 101px;
+  font-weight: bold;
+  color: #f5652c;
+}
+
+.allergy-numbers__item-title-img {
+  position: absolute;
+  right: -57px;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #f5652c;
+  background-color: #fff;
+}
+
+@media (max-width: 1440px) {
+  .allergy-numbers {
+    justify-content: space-around;
+  }
+  .allergy-numbers__item {
+    width: 300px;
   }
 }
