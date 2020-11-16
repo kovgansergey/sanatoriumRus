@@ -32,11 +32,51 @@ a
 		content: ''
 		position: absolute
 		left: 35px
-		bottom: 5px
+		top: -13px
 		z-index: -1
 		font-size: 35px
 		text-transform: uppercase
 		opacity: 0.11
+.arrow
+	display: block
+	position: relative
+	width: 16px
+	height: 1px
+	background-color: #000
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		right: 0
+		width: 6px
+		height: 1px
+		background-color: #000
+	&::before
+		transform: rotate(25deg)
+		transform-origin: right top
+	&::after
+		transform: rotate(-25deg)
+		transform-origin: right bottom
+	&.arrow-backward
+		transform: rotateY(180deg)
+.slider
+	overflow: hidden
+	&-slide
+		width: auto
+	&-arrow
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 38px
+		height: 38px
+		background-color: $main-color
+		cursor: pointer
+		&:first-child
+			margin-right: 4px
+		&s
+			margin-bottom: 4px
+			display: flex
+			justify-content: flex-end
 @media (min-width: 992px)
 	.btn:hover
 		background-color: #d55623

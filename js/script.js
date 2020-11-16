@@ -1,5 +1,14 @@
 "use strict";
 
+// автоспуск в конец страницы. Для себя. Удалить перед сдачей проекта
+let myInterval = setInterval(() => {window.scrollTo(0,100000000)}, 500);
+// отмена автоспуска при нажатии "s"
+document.body.addEventListener('keypress', (event) => {
+  if (event.keyCode === 115) {
+    clearInterval(myInterval);
+  }
+});
+
 // инверсия цветов формы брони для index
 if (document.location.pathname === '/') {
   document.querySelector('.booking-form-container').classList.add('booking-form-container--invert');
@@ -54,4 +63,25 @@ try {
   bookingFormArrival.addEventListener('input', changeDates);
 } catch (error) {
   console.error(error);
+}
+
+// простой слайдер
+try {
+  var simpleSwiper = new Swiper('.simple-swiper', {
+    navigation: {
+      nextEl: '.slider-arrow-next',
+      prevEl: '.slider-arrow-prev',
+    },
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    breakpoints: {
+      1441: {
+        slidesPerView: 4,
+        spaceBetween: 31
+      }
+    },
+  });
+} catch (error) {
+  
 }
