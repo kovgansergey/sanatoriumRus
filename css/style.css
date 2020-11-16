@@ -60,7 +60,6 @@ a {
   position: absolute;
   left: 35px;
   top: -13px;
-  z-index: -1;
   font-size: 35px;
   text-transform: uppercase;
   opacity: 0.11;
@@ -475,6 +474,24 @@ a {
   font-weight: bold;
 }
 
+.index-about-us {
+  padding-top: 50px;
+  padding-bottom: 105px;
+  background: url(../img/index/index-about-us-bg.jpg) center/cover no-repeat;
+}
+
+.index-about-us__title::after {
+  content: 'О САНАТОРИИ';
+}
+
+.index-about-us__description {
+  margin-top: 75px;
+  margin-left: auto;
+  width: 100%;
+  max-width: 680px;
+  font-size: 24px;
+}
+
 @media (max-width: 991px) {
   .index-main {
     padding-top: 210px;
@@ -487,6 +504,15 @@ a {
   .index-offer__all-offers {
     margin-top: 25px;
     width: 235px;
+  }
+  .index-about-us {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .index-about-us__description {
+    margin-top: 40px;
+    max-width: 452px;
+    font-size: 16px;
   }
 }
 
