@@ -40,7 +40,37 @@
       &__btn
         width: 233px
         height: 48px
-// @media (max-width: 1440px)
+  &-treatment
+    padding-top: 50px
+    &__wrap
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+    &__item
+      position: relative
+      margin-top: 50px
+      padding: 15px 33px 30px 33px
+      width: 322px
+      box-shadow: 0 7px 6px 1px rgba(0, 7, 5, 0.1)
+      border-radius: 5px
+      background-color: #eff2f5
+      &-img
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+      &-title
+        color: $main-color
+    &__btn
+      display: block
+      margin: 65px auto 0
+      width: 234px
+      height: 48px
+@media (max-width: 1440px)
+  .index
+    &-treatment
+      &__wrap
+        justify-content: space-around
 @media (max-width: 991px)
   .index
     &-main
@@ -67,5 +97,15 @@
         &__title
           max-width: 370px
           font-size: 24px
+    &-treatment
+      padding-top: 20px
+      &__item
+        margin-top: 15px
+        padding: 15px 22px 15px 22px
+        width: 255px
+        &-img
+          transform: scale(0.5) translate(50%,-100%)
+      &__btn
+        margin-top: 20px
 // @media (max-width: 767px)
 // @media (max-width: 576px)

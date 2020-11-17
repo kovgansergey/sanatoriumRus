@@ -514,6 +514,50 @@ a {
   height: 48px;
 }
 
+.index-treatment {
+  padding-top: 50px;
+}
+
+.index-treatment__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.index-treatment__item {
+  position: relative;
+  margin-top: 50px;
+  padding: 15px 33px 30px 33px;
+  width: 322px;
+  box-shadow: 0 7px 6px 1px rgba(0, 7, 5, 0.1);
+  border-radius: 5px;
+  background-color: #eff2f5;
+}
+
+.index-treatment__item-img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.index-treatment__item-title {
+  color: #f5652c;
+}
+
+.index-treatment__btn {
+  display: block;
+  margin: 65px auto 0;
+  width: 234px;
+  height: 48px;
+}
+
+@media (max-width: 1440px) {
+  .index-treatment__wrap {
+    justify-content: space-around;
+  }
+}
+
 @media (max-width: 991px) {
   .index-main {
     padding-top: 210px;
@@ -546,6 +590,20 @@ a {
   .index-allergy-treatment__title {
     max-width: 370px;
     font-size: 24px;
+  }
+  .index-treatment {
+    padding-top: 20px;
+  }
+  .index-treatment__item {
+    margin-top: 15px;
+    padding: 15px 22px 15px 22px;
+    width: 255px;
+  }
+  .index-treatment__item-img {
+    transform: scale(0.5) translate(50%, -100%);
+  }
+  .index-treatment__btn {
+    margin-top: 20px;
   }
 }
 
