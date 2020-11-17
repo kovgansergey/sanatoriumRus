@@ -85,3 +85,33 @@ try {
 } catch (error) {
   
 }
+
+// маска телефона в инпутах формы
+try {
+  $('input[type=tel]').mask('+7 (000) 000-0000');
+} catch (error) {
+  
+}
+
+// валидация формы
+try {
+  $('.form').validate({
+    rules: {
+      userName: "required",
+      userPhone: {
+        required: true,
+        minlength: 17
+      }
+    },
+    messages: {
+      userName: 'Введите имя',
+      userPhone: {
+        required: 'Введите телефон',
+        minlength: 'Не корректный номер'
+      }
+    },
+    errorClass: 'form-error-message'
+  });
+} catch (error) {
+  
+}

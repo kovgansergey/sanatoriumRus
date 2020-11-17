@@ -25,6 +25,11 @@ a
 	&-btn
 		width: 233px
 		height: 48px
+.big
+	&-title
+		font-size: 42px
+	&-subtitle
+		font-size: 27px
 .title
 	position: relative
 	font-size: 25px
@@ -76,6 +81,35 @@ a
 			margin-bottom: 4px
 			display: flex
 			justify-content: flex-end
+.input
+	padding: 0 25px
+	border: none
+	outline: none
+	&-block
+		position: relative
+.questions
+	padding-top: 325px
+	padding-bottom: 210px
+	background: url(../img/interface/questions-bg.jpg) center/cover no-repeat
+	text-align: center
+	&-form
+		margin-top: 85px
+		display: flex
+		justify-content: center
+		&__input
+			width: 374px
+			height: 58px
+			&-block
+				margin-right: 35px
+		&__btn
+			width: 374px
+			height: 58px
+label.form-error-message
+	position: absolute
+	bottom: 0
+	left: 50%
+	transform: translateX(-50%)
+	color: red
 @media (min-width: 992px)
 	.btn:hover
 		background-color: #d55623
@@ -93,11 +127,31 @@ a
 		&-description
 			max-width: 450px
 			font-size: 19px
+	.big
+		&-title
+			font-size: 24px
+		&-subtitle
+			font-size: 19px
 	.title
 		font-size: 17px
 		&::after
 			left: 20px
 			font-size: 21px
+	.questions
+		padding-top: 150px
+		padding-bottom: 100px
+		&-form
+			margin-top: 35px
+			flex-direction: column
+			&__input
+				width: 100%
+				height: 40px
+				&-block
+					margin-right: 0
+					margin-bottom: 15px
+			&__btn
+				width: 100%
+				height: 40px
 @media (max-width: 767px)
 	.container
 		width: 540px
