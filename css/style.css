@@ -629,8 +629,51 @@ label.form-error-message {
   height: 48px;
 }
 
+.index-comments {
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+
+.index-comments__title::after {
+  content: 'ОТЗЫВЫ О САНАТОРИИ';
+}
+
+.index-comments__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.index-comments__item {
+  margin-top: 60px;
+  padding: 25px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 5px 12px 1px rgba(0, 7, 5, 0.17);
+}
+
+.index-comments__item-header {
+  display: flex;
+}
+
+.index-comments__item-header-title {
+  margin-left: 20px;
+  font-size: 22px;
+}
+
+.index-comments__item-header-title p {
+  margin: 0;
+}
+
+.index-comments__item-header-title p:first-child {
+  font-weight: bold;
+}
+
 @media (max-width: 1440px) {
   .index-treatment__wrap {
+    justify-content: space-around;
+  }
+  .index-comments__wrap {
     justify-content: space-around;
   }
 }
@@ -680,6 +723,17 @@ label.form-error-message {
   }
   .index-treatment__btn {
     margin-top: 20px;
+  }
+  .index-comments {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+  .index-comments__item {
+    margin-top: 20px;
+    max-width: 345px;
+  }
+  .index-comments__item-header-title {
+    font-size: 17px;
   }
 }
 
