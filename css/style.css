@@ -669,6 +669,17 @@ label.form-error-message {
   font-weight: bold;
 }
 
+.index-rest {
+  padding-top: 145px;
+  padding-bottom: 115px;
+  background: url(../img/index/rest-bg.jpg) center/cover no-repeat;
+}
+
+.index-rest__btn {
+  width: 183px;
+  height: 44px;
+}
+
 @media (max-width: 1440px) {
   .index-treatment__wrap {
     justify-content: space-around;
@@ -734,6 +745,10 @@ label.form-error-message {
   }
   .index-comments__item-header-title {
     font-size: 17px;
+  }
+  .index-rest {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
