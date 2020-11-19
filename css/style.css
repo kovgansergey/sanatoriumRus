@@ -73,6 +73,14 @@ a {
   opacity: 0.11;
 }
 
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+.main-color-text {
+  color: #f5652c;
+}
+
 .arrow {
   display: block;
   position: relative;
@@ -528,6 +536,95 @@ label.form-error-message {
   .menu-burger {
     bottom: 115px;
   }
+}
+
+.footer {
+  padding: 55px 0;
+}
+
+.footer__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__logo {
+  width: 167px;
+}
+
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__menus {
+  display: flex;
+}
+
+.footer__menu-link {
+  margin-right: 150px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.footer__info {
+  text-align: right;
+}
+
+.footer__info p {
+  margin: 0;
+}
+
+.footer__free-phone {
+  margin: 15px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 21px;
+}
+
+.footer__free-phone-number {
+  margin-left: 15px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.footer__free-phone-number::after {
+  content: 'Бесплатный звонок';
+  display: block;
+  font-size: 21px;
+  font-weight: normal;
+}
+
+.footer__phones {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer__line {
+  margin-top: 25px;
+  background-color: rgba(46, 46, 46, 0.37);
+}
+
+.footer__rights {
+  width: 100%;
+  max-width: 360px;
+}
+
+.footer__social {
+  display: flex;
+}
+
+.footer__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: #f5652c;
 }
 
 .index-main {
