@@ -1,14 +1,5 @@
 "use strict";
 
-// автоспуск в конец страницы. Для себя. Удалить перед сдачей проекта
-let myInterval = setInterval(() => {window.scrollTo(0,100000000)}, 500);
-// отмена автоспуска при нажатии "s"
-document.body.addEventListener('keypress', (event) => {
-  if (event.keyCode === 115) {
-    clearInterval(myInterval);
-  }
-});
-
 // инверсия цветов формы брони для index
 if (document.location.pathname === '/') {
   document.querySelector('.booking-form-container').classList.add('booking-form-container--invert');

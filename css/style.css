@@ -608,8 +608,7 @@ label.form-error-message {
 }
 
 .footer__rights {
-  width: 100%;
-  max-width: 360px;
+  width: 360px;
 }
 
 .footer__social {
@@ -625,6 +624,45 @@ label.form-error-message {
   height: 54px;
   border-radius: 50%;
   background-color: #f5652c;
+}
+
+@media (max-width: 1440px) {
+  .footer__menu-link {
+    margin-right: 75px;
+    margin-bottom: 15px;
+  }
+  .footer__rights {
+    width: 295px;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer__menus {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 25px 0;
+  }
+  .footer__wrap {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .footer__logo {
+    width: 120px;
+  }
+  .footer__info {
+    margin-top: 15px;
+  }
+  .footer__phones {
+    font-size: 13px;
+  }
+  .footer__social {
+    margin-top: 15px;
+    justify-content: center;
+  }
 }
 
 .index-main {
