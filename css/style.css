@@ -185,6 +185,33 @@ label.form-error-message {
   color: red;
 }
 
+.way {
+  padding-top: 100px;
+  padding-bottom: 25px;
+  font-weight: bold;
+}
+
+.way, .way__index {
+  color: #b7b7b7;
+}
+
+.way__arrow, .way__arrow::after, .way__arrow::before {
+  background-color: #b7b7b7;
+}
+
+.way__wrap {
+  display: flex;
+  align-items: center;
+}
+
+.way__index {
+  text-decoration: underline;
+}
+
+.way__arrow {
+  margin: 0 5px;
+}
+
 @media (min-width: 992px) {
   .btn:hover {
     background-color: #d55623;
@@ -197,6 +224,10 @@ label.form-error-message {
   }
   .container {
     width: 960px;
+  }
+  .way {
+    padding-top: 80px;
+    padding-bottom: 10px;
   }
 }
 
@@ -243,6 +274,9 @@ label.form-error-message {
   .questions-form__btn {
     width: 100%;
     height: 40px;
+  }
+  .way {
+    padding-top: 220px;
   }
 }
 
@@ -972,10 +1006,20 @@ label.form-error-message {
   }
 }
 
+.allergy-main {
+  padding-top: 200px;
+  padding-bottom: 255px;
+  background: url(../img/allergy/main-bg.jpg) center/cover no-repeat;
+}
+
 .allergy-numbers {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.allergy-numbers-section {
+  padding-top: 45px;
 }
 
 .allergy-numbers__item {
@@ -1008,11 +1052,66 @@ label.form-error-message {
   background-color: #fff;
 }
 
+.allergy-description {
+  padding-top: 30px;
+  font-size: 21px;
+}
+
+.allergy-types {
+  padding-top: 20px;
+}
+
+.allergy-types__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.allergy-types__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  min-width: 157px;
+}
+
+.allergy-types__item-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 116px;
+  height: 116px;
+  border: 3px solid #f5652c;
+  border-radius: 50%;
+}
+
 @media (max-width: 1440px) {
   .allergy-numbers {
     justify-content: space-around;
   }
   .allergy-numbers__item {
     width: 300px;
+  }
+  .allergy-description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .allergy-main {
+    padding-top: 80px;
+    padding-bottom: 110px;
+  }
+  .allergy-numbers-section {
+    padding-top: 15px;
+  }
+  .allergy-description {
+    padding-top: 10px;
+  }
+  .allergy-types__wrap {
+    justify-content: space-around;
+  }
+  .allergy-types__item {
+    margin-top: 10px;
   }
 }
