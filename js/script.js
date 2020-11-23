@@ -86,7 +86,7 @@ try {
 
 // валидация формы
 try {
-  $('.form').validate({
+  $('.questions-form-validate').validate({
     rules: {
       userName: "required",
       userPhone: {
