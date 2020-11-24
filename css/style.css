@@ -132,6 +132,7 @@ a {
   height: 38px;
   background-color: #f5652c;
   cursor: pointer;
+  outline: none;
 }
 
 .slider-arrow:first-child {
@@ -1194,5 +1195,70 @@ label.form-error-message {
   .allergy-program__btn:first-child {
     margin-right: 0;
     margin-bottom: 15px;
+  }
+}
+
+.discounts-main .slider {
+  margin-bottom: 30px;
+}
+
+.discounts-advantages {
+  padding-top: 70px;
+}
+
+.discounts-advantages__wrap {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.discounts-advantages__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 295px;
+}
+
+.discounts-advantages__item-img {
+  display: flex;
+  align-items: flex-end;
+  height: 72px;
+}
+
+.discounts-advantages__item .title {
+  font-weight: bold;
+}
+
+.discounts-advantages__item .text {
+  margin: 0;
+  text-align: center;
+}
+
+.discounts-description {
+  padding: 80px 0;
+}
+
+@media (max-width: 1440px) {
+  .discounts-main .slider {
+    margin-bottom: 20px;
+  }
+  .discounts-advantages__item {
+    width: 225px;
+  }
+}
+
+@media (max-width: 991px) {
+  .discounts-advantages {
+    padding-top: 20px;
+  }
+  .discounts-description {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .discounts-advantages__item {
+    width: 150px;
   }
 }
