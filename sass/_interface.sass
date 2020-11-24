@@ -11,10 +11,12 @@ a
 	margin: auto
 .btn
 	font-weight: bold
-	background-color: #f5652c
+	background-color: $main-color
 	border: none
 	outline: none
 	cursor: pointer
+	&--white
+		background-color: #fff
 .main
 	&-title
 		font-size: 73px
@@ -133,8 +135,11 @@ label.form-error-message
 	&__arrow
 		margin: 0 5px
 @media (min-width: 992px)
-	.btn:hover
-		background-color: #d55623
+	.btn
+		&:hover
+			background-color: #d55623
+		&--white:hover
+			background-color: #b7b7b7
 @media (max-width: 1440px)
 	body
 		font-size: 14px

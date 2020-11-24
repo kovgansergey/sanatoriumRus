@@ -35,6 +35,10 @@ a {
   cursor: pointer;
 }
 
+.btn--white {
+  background-color: #fff;
+}
+
 .main-title {
   font-size: 73px;
 }
@@ -215,6 +219,9 @@ label.form-error-message {
 @media (min-width: 992px) {
   .btn:hover {
     background-color: #d55623;
+  }
+  .btn--white:hover {
+    background-color: #b7b7b7;
   }
 }
 
@@ -1085,6 +1092,51 @@ label.form-error-message {
   border-radius: 50%;
 }
 
+.allergy-treatment {
+  padding-top: 35px;
+}
+
+.allergy-treatment__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.allergy-treatment__item {
+  margin-top: 40px;
+  width: 324px;
+}
+
+.allergy-treatment__item-img {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.allergy-treatment__item-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.allergy-program {
+  padding-top: 200px;
+  padding-bottom: 75px;
+  background: url(../img/allergy/program-bg.jpg) center/cover no-repeat;
+}
+
+.allergy-program__subtitle {
+  width: 100%;
+  max-width: 600px;
+}
+
+.allergy-program__btn {
+  width: 233px;
+  height: 48px;
+}
+
+.allergy-program__btn:first-child {
+  margin-right: 25px;
+}
+
 @media (max-width: 1440px) {
   .allergy-numbers {
     justify-content: space-around;
@@ -1094,6 +1146,9 @@ label.form-error-message {
   }
   .allergy-description {
     font-size: 16px;
+  }
+  .allergy-treatment__item {
+    width: 225px;
   }
 }
 
@@ -1113,5 +1168,31 @@ label.form-error-message {
   }
   .allergy-types__item {
     margin-top: 10px;
+  }
+  .allergy-treatment {
+    padding-top: 10px;
+  }
+  .allergy-treatment__wrap {
+    justify-content: space-around;
+  }
+  .allergy-treatment__item {
+    margin-top: 10px;
+  }
+  .allergy-program {
+    padding-top: 110px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .allergy-treatment__item {
+    width: 155px;
+  }
+  .allergy-program__btn {
+    width: 100%;
+  }
+  .allergy-program__btn:first-child {
+    margin-right: 0;
+    margin-bottom: 15px;
   }
 }

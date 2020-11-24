@@ -56,6 +56,33 @@
         height: 116px
         border: 3px solid $main-color
         border-radius: 50%
+  &-treatment
+    padding-top: 35px
+    &__wrap
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+    &__item
+      margin-top: 40px
+      width: 324px
+      &-img
+        border-radius: 5px
+        overflow: hidden
+        & img
+          width: 100%
+          object-fit: cover
+  &-program
+    padding-top: 200px
+    padding-bottom: 75px
+    background: url(../img/allergy/program-bg.jpg) center/cover no-repeat
+    &__subtitle
+      width: 100%
+      max-width: 600px
+    &__btn
+      width: 233px
+      height: 48px
+      &:first-child
+        margin-right: 25px
 @media (max-width: 1440px)
   .allergy
     &-numbers
@@ -64,6 +91,9 @@
         width: 300px
     &-description
       font-size: 16px
+    &-treatment
+      &__item
+        width: 225px
 @media (max-width: 991px)
   .allergy
     &-main
@@ -79,5 +109,24 @@
         justify-content: space-around
       &__item
         margin-top: 10px
+    &-treatment
+      padding-top: 10px
+      &__wrap
+        justify-content: space-around
+      &__item
+        margin-top: 10px
+    &-program
+      padding-top: 110px
+      padding-bottom: 40px
 // @media (max-width: 767px)
-// @media (max-width: 576px)
+@media (max-width: 576px)
+  .allergy
+    &-treatment
+      &__item
+        width: 155px
+    &-program
+      &__btn
+        width: 100%
+        &:first-child
+          margin-right: 0
+          margin-bottom: 15px
