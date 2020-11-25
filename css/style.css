@@ -1452,3 +1452,37 @@ label.form-error-message {
     height: 315px;
   }
 }
+
+.aboutUs-main {
+  padding-top: 160px;
+  padding-bottom: 200px;
+  background: url(../img/aboutUs/main-bg.jpg) center/cover no-repeat;
+}
+
+.aboutUs-advantages {
+  padding-top: 15px;
+}
+
+.aboutUs-advantages__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.aboutUs-advantages__item {
+  margin-top: 45px;
+  width: 435px;
+  box-shadow: 5px 4px 6px 1px rgba(0, 7, 5, 0.05);
+  text-align: center;
+}
+
+.aboutUs-advantages__item img {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .aboutUs-main {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+}
