@@ -1,0 +1,61 @@
+.contacts
+  &-main
+    &__wrap
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-top: 60px
+    &__map
+      width: 700px
+      height: 475px
+      border-radius: 5px
+      overflow: hidden
+    &__address
+      width: 650px
+      font-size: 21px
+      & .title
+        font-weight: bold
+  &-info
+    padding-top: 30px
+    padding-bottom: 50px
+    &__wrap
+      display: flex
+      justify-content: space-between
+    &__item
+      width: 310px
+@media (max-width: 1440px)
+  .contacts
+    &-main
+      &__map
+        width: 465px
+      &__address
+        width: 465px
+    &-info
+      &__item
+        width: 265px
+@media (max-width: 991px)
+  .contacts
+    &-main
+      &__wrap
+        flex-direction: column
+        margin-top: 20px
+      &__map
+        width: 100%
+      &__address
+        width: 100%
+        font-size: 16px
+    &-info
+      padding-top: 5px
+      padding-bottom: 20px
+      &__item
+        width: 230px
+@media (max-width: 767px)
+  .contacts
+    &-info
+      &__wrap
+        flex-direction: column
+@media (max-width: 576px)
+  .contacts
+    &-main
+      &__map
+        height: 315px

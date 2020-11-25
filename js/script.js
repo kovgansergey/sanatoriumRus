@@ -106,3 +106,21 @@ try {
 } catch (error) {
   
 }
+
+// карта
+try {
+  function init() {
+    var contactsMap = new ymaps.Map("contactsMap", {
+      center: [44.89024418, 37.29920689],
+      zoom: 15
+    });
+    var placemark = new ymaps.Placemark([44.89307757, 37.29956273], {}, {
+      preset: "islands#redDotIcon"
+    });
+    contactsMap.geoObjects.add(placemark);
+  }
+
+  ymaps.ready(init);
+} catch (error) {
+  
+}
