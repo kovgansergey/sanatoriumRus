@@ -1,0 +1,79 @@
+.treatment
+  &-main
+    &__wrap
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+    &__item
+      margin-top: 35px
+      padding: 30px
+      width: 675px
+      background-color: #eff8ff
+      &-title
+        display: flex
+        align-items: center
+        &-img
+          margin-right: 25px
+          width: 51px
+          height: 51px
+          border: 1px solid $main-color
+        & .title
+          margin: 0
+      &-description
+        font-size: 21px
+      &-img
+        width: 100%
+        border-radius: 15px
+      &-btn
+        margin-top: 20px
+        width: 233px
+        height: 48px
+  &-info
+    & .title
+      margin: 50px 0
+  &-types
+    padding-top: 20px
+    padding-bottom: 150px
+@media (max-width: 1440px)
+  .treatment
+    &-main
+      &__item
+        width: 465px
+        &-title
+          & .title
+            width: 248px
+@media (max-width: 991px)
+  .treatment
+    &-main
+      &__item
+        margin-top: 20px
+        padding: 15px
+        width: 350px
+        &-title
+          &-img
+            margin-right: 15px
+          & .title
+            width: 230px
+        &-description
+          font-size: 16px
+    &-info
+      & .title
+        margin: 25px 0
+    &-types
+      padding-top: 1px
+      padding-bottom: 35px
+@media (max-width: 767px)
+  .treatment
+    &-main
+      &__item
+        width: 100%
+        &-title
+          & .title
+            width: auto
+@media (max-width: 576px)
+  .treatment
+    &-main
+      &__item
+        &-title
+          & .title
+            width: 185px

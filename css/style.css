@@ -85,6 +85,13 @@ a {
   color: #f5652c;
 }
 
+.img-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
 .arrow {
   display: block;
   position: relative;
@@ -1260,5 +1267,106 @@ label.form-error-message {
 @media (max-width: 576px) {
   .discounts-advantages__item {
     width: 150px;
+  }
+}
+
+.treatment-main__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.treatment-main__item {
+  margin-top: 35px;
+  padding: 30px;
+  width: 675px;
+  background-color: #eff8ff;
+}
+
+.treatment-main__item-title {
+  display: flex;
+  align-items: center;
+}
+
+.treatment-main__item-title-img {
+  margin-right: 25px;
+  width: 51px;
+  height: 51px;
+  border: 1px solid #f5652c;
+}
+
+.treatment-main__item-title .title {
+  margin: 0;
+}
+
+.treatment-main__item-description {
+  font-size: 21px;
+}
+
+.treatment-main__item-img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.treatment-main__item-btn {
+  margin-top: 20px;
+  width: 233px;
+  height: 48px;
+}
+
+.treatment-info .title {
+  margin: 50px 0;
+}
+
+.treatment-types {
+  padding-top: 20px;
+  padding-bottom: 150px;
+}
+
+@media (max-width: 1440px) {
+  .treatment-main__item {
+    width: 465px;
+  }
+  .treatment-main__item-title .title {
+    width: 248px;
+  }
+}
+
+@media (max-width: 991px) {
+  .treatment-main__item {
+    margin-top: 20px;
+    padding: 15px;
+    width: 350px;
+  }
+  .treatment-main__item-title-img {
+    margin-right: 15px;
+  }
+  .treatment-main__item-title .title {
+    width: 230px;
+  }
+  .treatment-main__item-description {
+    font-size: 16px;
+  }
+  .treatment-info .title {
+    margin: 25px 0;
+  }
+  .treatment-types {
+    padding-top: 1px;
+    padding-bottom: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .treatment-main__item {
+    width: 100%;
+  }
+  .treatment-main__item-title .title {
+    width: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .treatment-main__item-title .title {
+    width: 185px;
   }
 }
