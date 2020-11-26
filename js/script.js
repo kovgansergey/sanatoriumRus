@@ -124,3 +124,42 @@ try {
 } catch (error) {
   
 }
+
+// слайдер галереи на странице О нас
+try {
+  var aboutUsGallerySlider = new Swiper('.aboutUs-gallery__slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 12,
+    autoplay: {
+      delay: 7000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      992: {
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+      }
+    },
+  });
+} catch (error) {
+
+}
+
+// слайдер с дипломами на странице О нас
+try {
+  var aboutUsAwardsSlider = new Swiper('.aboutUs-awards__slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 15,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      992: {
+        spaceBetween: 45,
+      },
+    },
+  });
+} catch (error) {
+  
+}
