@@ -129,6 +129,7 @@ a {
 
 .slider-slide {
   width: auto;
+  height: auto;
 }
 
 .slider-arrow {
@@ -936,91 +937,6 @@ label.form-error-message {
   }
 }
 
-.offer {
-  position: relative;
-  padding: 15px 15px 20px 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 324px;
-  height: 350px;
-  background-color: rgba(254, 254, 254, 0.5);
-}
-
-.offer__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.offer__percent-img {
-  margin-left: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background-color: #f5652c;
-  font-size: 27px;
-  font-weight: bold;
-}
-
-.offer__title {
-  position: relative;
-  font-size: 27px;
-  font-weight: bold;
-}
-
-.offer__title::after {
-  content: 'ВЫГОДНО';
-  position: absolute;
-  left: 60px;
-  top: -15px;
-  font-size: 35px;
-  text-transform: uppercase;
-  color: #fff;
-  opacity: 0.3;
-}
-
-.offer__subtitle {
-  font-size: 22px;
-}
-
-.offer__btn {
-  margin-left: auto;
-  width: 142px;
-  height: 37px;
-}
-
-@media (max-width: 991px) {
-  .offer {
-    padding: 10px 10px 15px 20px;
-    width: 270px;
-    height: 285px;
-  }
-  .offer__percent-img {
-    font-size: 19px;
-    width: 40px;
-    height: 40px;
-  }
-  .offer__title {
-    font-size: 19px;
-  }
-  .offer__title::after {
-    top: -8px;
-    left: 35px;
-    font-size: 21px;
-  }
-  .offer__subtitle {
-    font-size: 16px;
-  }
-}
-
 .allergy-main {
   padding-top: 200px;
   padding-bottom: 255px;
@@ -1205,8 +1121,9 @@ label.form-error-message {
   }
 }
 
-.discounts-main .slider {
+.discounts-main__slider {
   margin-bottom: 30px;
+  height: 773px;
 }
 
 .discounts-advantages {
@@ -1246,21 +1163,110 @@ label.form-error-message {
   padding: 80px 0;
 }
 
+.offer {
+  position: relative;
+  padding: 15px 15px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 324px;
+  height: 350px;
+  background-color: rgba(254, 254, 254, 0.5);
+}
+
+.offer__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.offer__percent-img {
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: #f5652c;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.offer__title {
+  position: relative;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.offer__title::after {
+  content: 'ВЫГОДНО';
+  position: absolute;
+  left: 60px;
+  top: -15px;
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.3;
+}
+
+.offer__subtitle {
+  font-size: 22px;
+}
+
+.offer__btn {
+  margin-left: auto;
+  width: 142px;
+  height: 37px;
+}
+
 @media (max-width: 1440px) {
-  .discounts-main .slider {
+  .discounts-main__slider {
     margin-bottom: 20px;
+    height: 766px;
   }
   .discounts-advantages__item {
     width: 225px;
   }
+  .offer {
+    width: 304px;
+  }
 }
 
 @media (max-width: 991px) {
+  .discounts-main__slider {
+    height: auto;
+  }
   .discounts-advantages {
     padding-top: 20px;
   }
   .discounts-description {
     padding: 10px 0;
+  }
+  .offer {
+    padding: 10px 10px 15px 20px;
+    width: 270px;
+    height: 285px;
+  }
+  .offer__percent-img {
+    font-size: 19px;
+    width: 40px;
+    height: 40px;
+  }
+  .offer__title {
+    font-size: 19px;
+  }
+  .offer__title::after {
+    top: -8px;
+    left: 35px;
+    font-size: 21px;
+  }
+  .offer__subtitle {
+    font-size: 16px;
   }
 }
 

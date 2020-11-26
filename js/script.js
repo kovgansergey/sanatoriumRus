@@ -56,9 +56,9 @@ try {
   console.error(error);
 }
 
-// простой слайдер
+// слайдер с предложениями на главной странице
 try {
-  var simpleSwiper = new Swiper('.simple-swiper', {
+  var indexOfferSlider = new Swiper('.index-offer__slider', {
     navigation: {
       nextEl: '.slider-arrow-next',
       prevEl: '.slider-arrow-prev',
@@ -67,11 +67,39 @@ try {
     slidesPerView: 'auto',
     spaceBetween: 20,
     breakpoints: {
+      992: {
+        spaceBetween: 24
+      },
       1441: {
-        slidesPerView: 4,
         spaceBetween: 31
       }
     },
+  });
+} catch (error) {
+  
+}
+
+// слайдер на странице Акции
+try {
+  var discountsMainSlider = new Swiper('.discounts-main__slider', {
+    navigation: {
+        nextEl: '.slider-arrow-next',
+        prevEl: '.slider-arrow-prev',
+      },
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      breakpoints: {
+        992: {
+          slidesPerView: 3,
+          slidesPerColumn: 2,
+          spaceBetween: 24
+        },
+        1441: {
+          slidesPerView: 4,
+          slidesPerColumn: 2,
+          spaceBetween: 31
+        }
+      },
   });
 } catch (error) {
   
