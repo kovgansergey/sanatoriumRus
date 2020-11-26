@@ -112,7 +112,7 @@ try {
   
 }
 
-// валидация формы
+// валидация формы Остались вопросы
 try {
   $('.questions-form-validate').validate({
     rules: {
@@ -129,7 +129,30 @@ try {
         minlength: 'Не корректный номер'
       }
     },
-    errorClass: 'form-error-message'
+    errorClass: 'form-error-message',
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "путь к файлу для отправки формы",
+        data: $(form).serialize(),
+        success: function () {
+          Swal.fire({
+            icon: 'success',
+            title: 'Заявка отправлена',
+            text: 'Оператор свяжется с Вами в ближайшее время'
+          });
+          $(form)[0].reset();
+        },
+        error: function (response) {
+          console.error(response);
+          Swal.fire({
+            icon: 'error',
+            title: 'Что-то не так!',
+            text: 'Попробуйте еще раз позднее.',
+          });
+        }
+      });
+    }
   });
 } catch (error) {
   
