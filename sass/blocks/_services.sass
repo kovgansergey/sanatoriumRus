@@ -1,0 +1,68 @@
+.services
+  &-main
+    font-size: 21px
+    &__block
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-top: 35px
+      padding: 25px 35px
+      background-color: #eff8ff
+      &:nth-child(odd)
+        flex-direction: row-reverse
+      &-text
+        width: 665px
+        & p
+          margin: 0
+      &-slider
+        width: 610px
+        & .slider-slide
+          height: 362px
+          border-radius: 15px
+          overflow: hidden
+          & img
+            width: 100%
+            height: 100%
+            object-fit: cover
+  &-infrastructure
+    padding-top: 15px
+    padding-bottom: 15px
+    font-size: 21px
+    &__slider
+      overflow: hidden
+@media (max-width: 1440px)
+  .services
+    &-main
+      &__block
+        &-text
+          width: 445px
+        &-slider
+          width: 430px
+          & .slider-slide
+            height: 255px
+@media (max-width: 991px)
+  .services
+    &-main
+      font-size: 16px
+      &__block
+        flex-direction: column
+        &:nth-child(odd)
+          flex-direction: column
+        &-text
+          margin-bottom: 15px
+          width: 100%
+        &-slider
+          & .slider-button
+            display: none
+    &-infrastructure
+      font-size: 16px
+@media (max-width: 767px)
+  .services
+    &-main
+      &__block
+        padding: 15px 10px
+        &-slider
+          width: 295px
+          & .slider-slide
+            height: 175px
+// @media (max-width: 576px)

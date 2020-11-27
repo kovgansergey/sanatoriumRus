@@ -124,6 +124,7 @@ a {
 }
 
 .slider {
+  position: relative;
   overflow: hidden;
 }
 
@@ -151,6 +152,28 @@ a {
   margin-bottom: 4px;
   display: flex;
   justify-content: flex-end;
+}
+
+.slider-button {
+  color: #f5652c;
+}
+
+.slider-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.slider-pagination-bullet {
+  margin: 0 10px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #f5652c;
+}
+
+.slider-pagination-bullet-active {
+  background-color: #d55623;
 }
 
 .input {
@@ -1588,5 +1611,102 @@ label.form-error-message {
 @media (max-width: 576px) {
   .aboutUs-advantages__item {
     width: 150px;
+  }
+}
+
+.services-main {
+  font-size: 21px;
+}
+
+.services-main__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 35px;
+  padding: 25px 35px;
+  background-color: #eff8ff;
+}
+
+.services-main__block:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.services-main__block-text {
+  width: 665px;
+}
+
+.services-main__block-text p {
+  margin: 0;
+}
+
+.services-main__block-slider {
+  width: 610px;
+}
+
+.services-main__block-slider .slider-slide {
+  height: 362px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.services-main__block-slider .slider-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services-infrastructure {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 21px;
+}
+
+.services-infrastructure__slider {
+  overflow: hidden;
+}
+
+@media (max-width: 1440px) {
+  .services-main__block-text {
+    width: 445px;
+  }
+  .services-main__block-slider {
+    width: 430px;
+  }
+  .services-main__block-slider .slider-slide {
+    height: 255px;
+  }
+}
+
+@media (max-width: 991px) {
+  .services-main {
+    font-size: 16px;
+  }
+  .services-main__block {
+    flex-direction: column;
+  }
+  .services-main__block:nth-child(odd) {
+    flex-direction: column;
+  }
+  .services-main__block-text {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .services-main__block-slider .slider-button {
+    display: none;
+  }
+  .services-infrastructure {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-main__block {
+    padding: 15px 10px;
+  }
+  .services-main__block-slider {
+    width: 295px;
+  }
+  .services-main__block-slider .slider-slide {
+    height: 175px;
   }
 }

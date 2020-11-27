@@ -199,6 +199,7 @@ try {
 // слайдер с дипломами на странице О нас
 try {
   var aboutUsAwardsSlider = new Swiper('.aboutUs-awards__slider', {
+    loop: true,
     slidesPerView: 'auto',
     spaceBetween: 15,
     autoplay: {
@@ -213,4 +214,38 @@ try {
   });
 } catch (error) {
   
+}
+
+// слайдеры на странице Услуги
+try {
+  var servicesSlider = new Swiper('.services-main__block-slider', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.slider-pagination',
+      clickable: true,
+      bulletClass: 'slider-pagination-bullet',
+      bulletActiveClass: 'slider-pagination-bullet-active',
+    },
+  });
+} catch (error) {
+  
+}
+
+// слайдер галереи на странице Услуги
+try {
+  var aboutUsGallerySlider = new Swiper('.services-infrastructure__slider', {
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 12,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+  });
+} catch (error) {
+
 }
