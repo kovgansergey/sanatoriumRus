@@ -81,6 +81,10 @@ a {
   text-transform: uppercase;
 }
 
+.bold-text {
+  font-weight: bold;
+}
+
 .main-color-text {
   color: #f5652c;
 }
@@ -250,6 +254,15 @@ label.form-error-message {
 
 .way__arrow {
   margin: 0 5px;
+}
+
+.rules__time {
+  display: flex;
+  align-items: center;
+}
+
+.rules__time img {
+  margin-right: 10px;
 }
 
 @media (min-width: 992px) {
