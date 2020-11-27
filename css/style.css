@@ -1723,3 +1723,31 @@ label.form-error-message {
     height: 175px;
   }
 }
+
+.price__kinds {
+  border: 1px solid green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  font-size: 19px;
+}
+
+.price__kinds-item {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.price__kinds-line {
+  display: block;
+  width: 1px;
+  height: 27px;
+  background-color: #b8b8b8;
+  opacity: 0.62;
+}
