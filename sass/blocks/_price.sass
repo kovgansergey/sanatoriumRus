@@ -1,27 +1,153 @@
 .price
   &__kinds
-    border: 1px solid green
+    border: 2px solid #eff2f5
     display: flex
-    justify-content: space-between
     align-items: center
+    flex-wrap: wrap
+    align-content: space-between
     height: 56px
     font-size: 19px
+    border-radius: 5px
+    overflow: hidden
+    box-shadow: -1px 7px 6px 1px rgba(0, 7, 5, 0.1)
     &-item
-      border: 1px solid red
       display: flex
       justify-content: center
       align-items: center
       margin: 0
-      width: 100%
-      height: 100%
+      width: 230px
+      height: 52px
       text-align: center
+      cursor: pointer
+      &.active
+        background-color: $main-color
     &-line
       display: block
       width: 1px
       height: 27px
       background-color: #b8b8b8
       opacity: 0.62
-// @media (max-width: 1440px)
-// @media (max-width: 991px)
-// @media (max-width: 767px)
-// @media (max-width: 576px)
+  &__table
+    position: relative
+    display: flex
+    margin-top: 35px
+    margin-bottom: 60px
+    width: 100%
+    border: 2px solid #eff2f5
+    box-shadow: -1px 7px 6px 1px rgba(0, 7, 5, 0.1)
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 308px
+      width: 2px
+      height: 100%
+      background-color: #eff2f5
+    &-title
+      display: flex
+      padding: 0 35px
+      height: 70px
+      font-weight: bold
+      background-color: #eff2f5
+      &-item
+        display: flex
+        align-items: center
+        margin: 0
+        height: 100%
+    &-category
+      display: flex
+      flex-direction: column
+      width: 308px
+      height: 100%
+      &-title-item
+        width: 100%
+      &-wrap
+        display: flex
+        flex-direction: column
+      &-item
+        display: flex
+        align-items: center
+        margin: 0
+        padding: 0 35px
+        height: 50px
+        cursor: pointer
+        &.active
+          border-left: 6px solid $main-color
+          padding-left: 29px
+    &-prices
+      width: 1078px
+      &-title-item
+        width: 25%
+      &-wrap
+        display: flex
+        flex-direction: column
+      &-item
+        display: flex
+        padding: 0 35px
+        height: 50px
+        & p
+          display: flex
+          align-items: center
+          margin: 0
+          width: 25%
+        &:hover
+          background-color: #eff2f5
+@media (max-width: 1440px)
+  .price
+    &__kinds
+      &-item
+        width: 158px
+    &__table
+      &::before
+        left: 210px
+      &-category
+        width: 210px
+      &-prices
+        width: 745px
+@media (max-width: 991px)
+  .price
+    &__kinds
+      height: 84px
+      font-size: 16px
+      &-item
+        width: 238px
+        height: 40px
+      &-line:nth-child(6)
+        display: none
+    &__table
+      flex-direction: column
+      &::before
+        display: none
+      &-title
+        height: 50px
+      &-category
+        width: 100%
+        &-wrap
+          height: 160px
+          overflow-y: scroll
+        &-item
+          padding: 12px 35px
+      &-prices
+        width: 100%
+        &-wrap
+          height: 240px
+          overflow-y: scroll
+        &-item
+          height: 40px
+@media (max-width: 767px)
+  .price
+    &__kinds
+      &-item
+        width: 178px
+@media (max-width: 576px)
+  .price
+    &__kinds
+      height: 124px
+      &-item
+        width: 155px
+      &-line
+        &:nth-child(4),
+        &:nth-child(8)
+          display: none
+        &:nth-child(6)
+          display: block

@@ -249,3 +249,44 @@ try {
 } catch (error) {
 
 }
+
+// события клика на странице Платные услуги
+try {
+  const price = document.querySelector('.price'),
+    priceKinds = price.querySelectorAll('.price__kinds-item');
+  let priceCategories;
+
+  // функция получения данных по полученной категории по группе услуг
+  function getPriceCategory(category) {
+
+
+    priceCategories.forEach((item) => {item.classList.remove('active')});
+    category.classList.add('active');
+  }
+
+  // функция получения категорий по группе услуг
+  function getPriceKind(kind) {
+
+
+    priceKinds.forEach((item) => {item.classList.remove('active')});
+    kind.classList.add('active');
+    priceCategories = price.querySelectorAll('.price__table-category-item');
+    getPriceCategory(priceCategories[0]);
+  }
+
+  price.addEventListener('click', (event) => {
+    const target = event.target;
+
+    if (target.classList.contains('price__kinds-item') && !target.classList.contains('active')) {
+      getPriceKind(target);
+    };
+
+    if (target.classList.contains('price__table-category-item') && !target.classList.contains('active')) {
+      getPriceCategory(target);
+    };
+  });
+
+  getPriceKind(priceKinds[0]);
+} catch (error) {
+  
+}
