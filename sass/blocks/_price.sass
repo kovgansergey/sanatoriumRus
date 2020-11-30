@@ -103,7 +103,7 @@
       &-category
         width: 210px
       &-prices
-        width: 745px
+        width: 746px
 @media (max-width: 991px)
   .price
     &__kinds
@@ -116,6 +116,7 @@
         display: none
     &__table
       flex-direction: column
+      margin-bottom: 30px
       &::before
         display: none
       &-title
@@ -139,6 +140,17 @@
     &__kinds
       &-item
         width: 178px
+    &__table
+      &-title
+        padding: 0 20px
+      &-category
+        &-item
+          padding: 12px 20px
+          &.active
+            padding-left: 14px
+      &-prices
+        &-item
+          padding: 0 20px
 @media (max-width: 576px)
   .price
     &__kinds
@@ -151,3 +163,32 @@
           display: none
         &:nth-child(6)
           display: block
+    &__table
+      &-prices
+        &-title
+          position: relative
+          height: 150px
+          &-item
+            position: absolute
+            top: 50%
+            align-items: start
+            height: 50px
+            width: 120px
+            transform: translate(-50%, -50%) rotate(-90deg)
+            &:nth-child(1)
+              left: 45px
+            &:nth-child(2)
+              left: 170px
+            &:nth-child(3)
+              left: 236px
+            &:nth-child(4)
+              left: 276px
+        &-item
+          & p
+            &:nth-child(1)
+              width: 125px
+            &:nth-child(2)
+              width: 66px
+            &:nth-child(3),
+            &:nth-child(4)
+              width: 40px

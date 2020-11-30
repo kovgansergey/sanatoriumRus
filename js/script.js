@@ -5,7 +5,7 @@ if (document.location.pathname === '/') {
   document.querySelector('.booking-form-container').classList.add('booking-form-container--invert');
 }
 
-// скрипт изменения бургер-меню на мобильных экранах
+// скрипт бургер-меню на мобильных экранах
 try {
   const menu = document.querySelector('.menu'),
     menuBurger = document.querySelector('.menu-burger');
@@ -105,77 +105,6 @@ try {
   
 }
 
-// маска телефона в инпутах формы
-try {
-  $('input[type=tel]').mask('+7 (000) 000-0000');
-} catch (error) {
-  
-}
-
-// валидация формы Остались вопросы
-try {
-  $('.questions-form-validate').validate({
-    rules: {
-      userName: "required",
-      userPhone: {
-        required: true,
-        minlength: 17
-      }
-    },
-    messages: {
-      userName: 'Введите имя',
-      userPhone: {
-        required: 'Введите телефон',
-        minlength: 'Не корректный номер'
-      }
-    },
-    errorClass: 'form-error-message',
-    submitHandler: function (form) {
-      $.ajax({
-        type: "POST",
-        url: "путь к файлу для отправки формы",
-        data: $(form).serialize(),
-        success: function () {
-          Swal.fire({
-            icon: 'success',
-            title: 'Заявка отправлена',
-            text: 'Оператор свяжется с Вами в ближайшее время'
-          });
-          $(form)[0].reset();
-        },
-        error: function (response) {
-          console.error(response);
-          Swal.fire({
-            icon: 'error',
-            title: 'Что-то не так!',
-            text: 'Попробуйте еще раз позднее.',
-          });
-        }
-      });
-    }
-  });
-} catch (error) {
-  
-}
-
-// карта
-try {
-  function init() {
-    var contactsMap = new ymaps.Map("contactsMap", {
-      center: [44.89024418, 37.29920689],
-      zoom: 15
-    });
-    var placemark = new ymaps.Placemark([44.89307757, 37.29956273], {}, {
-      preset: "islands#redDotIcon"
-    });
-    contactsMap.geoObjects.add(placemark);
-  }
-
-  ymaps.ready(init);
-} catch (error) {
-  
-}
-
 // слайдер галереи на странице О нас
 try {
   var aboutUsGallerySlider = new Swiper('.aboutUs-gallery__slider', {
@@ -250,43 +179,73 @@ try {
 
 }
 
-// события клика на странице Платные услуги
+// маска телефона в инпутах формы
 try {
-  const price = document.querySelector('.price'),
-    priceKinds = price.querySelectorAll('.price__kinds-item');
-  let priceCategories;
+  $('input[type=tel]').mask('+7 (000) 000-0000');
+} catch (error) {
+  
+}
 
-  // функция получения данных по полученной категории по группе услуг
-  function getPriceCategory(category) {
-
-
-    priceCategories.forEach((item) => {item.classList.remove('active')});
-    category.classList.add('active');
-  }
-
-  // функция получения категорий по группе услуг
-  function getPriceKind(kind) {
-
-
-    priceKinds.forEach((item) => {item.classList.remove('active')});
-    kind.classList.add('active');
-    priceCategories = price.querySelectorAll('.price__table-category-item');
-    getPriceCategory(priceCategories[0]);
-  }
-
-  price.addEventListener('click', (event) => {
-    const target = event.target;
-
-    if (target.classList.contains('price__kinds-item') && !target.classList.contains('active')) {
-      getPriceKind(target);
-    };
-
-    if (target.classList.contains('price__table-category-item') && !target.classList.contains('active')) {
-      getPriceCategory(target);
-    };
+// валидация формы Остались вопросы
+try {
+  $('.questions-form-validate').validate({
+    rules: {
+      userName: "required",
+      userPhone: {
+        required: true,
+        minlength: 17
+      }
+    },
+    messages: {
+      userName: 'Введите имя',
+      userPhone: {
+        required: 'Введите телефон',
+        minlength: 'Не корректный номер'
+      }
+    },
+    errorClass: 'form-error-message',
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "путь к файлу для отправки формы",
+        data: $(form).serialize(),
+        success: function () {
+          Swal.fire({
+            icon: 'success',
+            title: 'Заявка отправлена',
+            text: 'Оператор свяжется с Вами в ближайшее время'
+          });
+          $(form)[0].reset();
+        },
+        error: function (response) {
+          console.error(response);
+          Swal.fire({
+            icon: 'error',
+            title: 'Что-то не так!',
+            text: 'Попробуйте еще раз позднее.',
+          });
+        }
+      });
+    }
   });
+} catch (error) {
+  
+}
 
-  getPriceKind(priceKinds[0]);
+// карта
+try {
+  function init() {
+    var contactsMap = new ymaps.Map("contactsMap", {
+      center: [44.89024418, 37.29920689],
+      zoom: 15
+    });
+    var placemark = new ymaps.Placemark([44.89307757, 37.29956273], {}, {
+      preset: "islands#redDotIcon"
+    });
+    contactsMap.geoObjects.add(placemark);
+  }
+
+  ymaps.ready(init);
 } catch (error) {
   
 }
