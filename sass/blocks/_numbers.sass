@@ -1,0 +1,136 @@
+.numbers
+  &__title::after
+    content: 'НОМЕРНОЙ ФОНД'
+  &__checkbox
+    position: absolute
+    opacity: 0
+    visibility: hidden
+    &-wrap
+      display: flex
+      flex-wrap: wrap
+      color: #aeaeae
+    &-block
+      position: relative
+      margin-right: 30px
+      margin-bottom: 25px
+    &-label
+      display: flex
+      align-items: center
+      cursor: pointer
+      &::before
+        content: ''
+        margin-right: 10px
+        width: 20px
+        height: 20px
+        border-radius: 1px
+        border: 2px solid #b9baba
+    &:checked + .numbers__checkbox-label::before
+      background: $main-color url('../img/numbers/checkbox-marker.png') center no-repeat
+      border-color: $main-color
+  &__slider
+    margin-top: -40px
+    margin-bottom: 40px
+    height: 1105px
+  &__card
+    position: relative
+    width: 324px
+    box-shadow: -1px 7px 6px 1px rgba(0, 7, 5, 0.14)
+    cursor: pointer
+    &-img
+      position: relative
+      width: 100%
+      height: 261px
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(255, 255, 255, 0.22)
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &-content
+      padding: 20px 15px
+      background-color: #eff2f5
+      & p
+        margin: 0
+      & .title
+        margin-bottom: 35px
+      &-row
+        display: flex
+        align-items: center
+        margin-bottom: 20px
+      &-square
+        & img
+          margin-right: 11px
+      &-person
+        & img
+          margin-right: 12px
+      &-price
+        color: $main-color
+        font-weight: bold
+        & img
+          margin-right: 9px
+    &::before
+      content: ''
+      display: none
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 5px
+      background-color: $main-color
+  &__main-img
+    width: 100%
+  &__list
+    padding: 0
+    list-style: none
+    & li
+      display: flex
+      align-items: center
+      &::before
+        content: ''
+        display: block
+        margin: 0 8px 0 4px
+        width: 6px
+        height: 6px
+        background-color: $main-color
+        border-radius: 50%
+@media (min-width: 992px)
+  .numbers__card:hover::before
+    display: block
+@media (max-width: 1440px)
+  .numbers
+    &__slider
+      height: 1055px
+    &__card
+      width: 304px
+      &-img
+        height: 244px
+@media (max-width: 991px)
+  .numbers
+    &__checkbox
+      &-block
+        margin-right: 20px
+        margin-bottom: 15px
+      &-label
+        &::before
+          margin-right: 5px
+          width: 15px
+          height: 15px
+    &__slider
+      height: 430px
+    &__card
+      width: 245px
+      &-img
+        height: 197px
+      &-content
+        & .title
+          margin-bottom: 20px
+        &-row
+          margin-bottom: 10px
+// @media (max-width: 767px)
+// @media (max-width: 576px)
