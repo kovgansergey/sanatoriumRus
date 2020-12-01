@@ -105,6 +105,49 @@ try {
 
 }
 
+// слайдеры на странице Номера разворот
+try {
+  var numbersInDetailBigSlider = new Swiper('.numbersInDetail-main__gallery-bigSlider');
+  var numbersInDetailSmallSlider = new Swiper('.numbersInDetail-main__gallery-smallSlider', {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    loop: true,
+    slideToClickedSlide: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  numbersInDetailSmallSlider.on('slideChange', () => {
+    numbersInDetailBigSlider.slideTo(numbersInDetailSmallSlider.realIndex);
+  });
+} catch (error) {
+  
+}
+
+// слайдер с номерами на странице Номера разворот
+try {
+  var numbersInDetailSlider = new Swiper('.numbersInDetail-numbers__slider', {
+    navigation: {
+      nextEl: '.slider-arrow-next',
+      prevEl: '.slider-arrow-prev',
+    },
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    breakpoints: {
+      992: {
+        spaceBetween: 24
+      },
+      1441: {
+        spaceBetween: 31
+      }
+    },
+  });
+} catch (error) {
+  
+}
+
 // слайдер на странице Акции
 try {
   var discountsMainSlider = new Swiper('.discounts-main__slider', {
