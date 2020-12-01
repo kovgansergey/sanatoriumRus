@@ -89,6 +89,10 @@ a {
   color: #f5652c;
 }
 
+.line-through-text {
+  text-decoration: line-through;
+}
+
 .img-block {
   display: flex;
   justify-content: center;
@@ -1365,6 +1369,70 @@ label.form-error-message {
   height: 61px;
   border-radius: 31px;
   background-color: #f5652c;
+}
+
+.discountsInDetail-offers__table {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  border: 1px solid #eff2f5;
+}
+
+.discountsInDetail-offers__table-title {
+  display: flex;
+  height: 70px;
+  background-color: #eff2f5;
+  font-weight: bold;
+}
+
+.discountsInDetail-offers__table-row {
+  display: flex;
+  height: 50px;
+}
+
+.discountsInDetail-offers__table-row:nth-child(even) {
+  background-color: #eff2f5;
+}
+
+.discountsInDetail-offers__table-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #eff2f5;
+}
+
+.discountsInDetail-offers__table-col:nth-child(1) {
+  width: 160px;
+}
+
+.discountsInDetail-offers__table-col:nth-child(2) {
+  width: 187px;
+}
+
+.discountsInDetail-offers__table-col:nth-child(3) {
+  width: 217px;
+}
+
+.discountsInDetail-offers__table-col:nth-child(4) {
+  width: 317px;
+}
+
+.discountsInDetail-offers__table-col:nth-child(5) {
+  width: 207px;
+}
+
+.discountsInDetail-offers__table-col:nth-child(6) {
+  width: 300px;
+}
+
+.discountsInDetail-offers__table-col-cost {
+  flex-direction: column;
+}
+
+.discountsInDetail-offers__table-btn {
+  width: 175px;
+  height: 40px;
 }
 
 @media (max-width: 991px) {

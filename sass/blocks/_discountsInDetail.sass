@@ -34,6 +34,45 @@
         height: 61px
         border-radius: 31px
         background-color: $main-color
+  &-offers
+    &__table
+      display: flex
+      flex-direction: column
+      margin-bottom: 30px
+      border: 1px solid #eff2f5
+      &-title
+        display: flex
+        height: 70px
+        background-color: #eff2f5
+        font-weight: bold
+      &-row
+        display: flex
+        height: 50px
+        &:nth-child(even)
+          background-color: #eff2f5
+      &-col
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        border: 1px solid #eff2f5
+        &:nth-child(1)
+          width: 160px
+        &:nth-child(2)
+          width: 187px
+        &:nth-child(3)
+          width: 217px
+        &:nth-child(4)
+          width: 317px
+        &:nth-child(5)
+          width: 207px
+        &:nth-child(6)
+          width: 300px
+        &-cost
+          flex-direction: column
+      &-btn
+        width: 175px
+        height: 40px
 // @media (max-width: 1440px)
 @media (max-width: 991px)
   .discountsInDetail
