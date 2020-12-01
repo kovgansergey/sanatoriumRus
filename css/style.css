@@ -1317,6 +1317,66 @@ label.form-error-message {
   }
 }
 
+.discountsInDetail-main__title::after {
+  content: 'Предложения сезона';
+}
+
+.discountsInDetail-main__wrap {
+  display: flex;
+  align-items: center;
+}
+
+.discountsInDetail-main__img {
+  position: relative;
+  margin-right: 35px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.discountsInDetail-main__img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.discountsInDetail-main__img-percent {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.discountsInDetail-main__img img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.discountsInDetail-main__text {
+  width: 100%;
+  max-width: 655px;
+}
+
+.discountsInDetail-main__text-booking {
+  padding: 10px 14px;
+  width: 220px;
+  height: 61px;
+  border-radius: 31px;
+  background-color: #f5652c;
+}
+
+@media (max-width: 991px) {
+  .discountsInDetail-main__wrap {
+    flex-wrap: wrap;
+  }
+  .discountsInDetail-main__img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
 .treatment-main__wrap {
   display: flex;
   justify-content: space-between;
