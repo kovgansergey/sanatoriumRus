@@ -1669,27 +1669,18 @@ label.form-error-message {
 
 @media (max-width: 767px) {
   .treatmentBranch-main__item {
-    margin-bottom: 20px;
-    padding: 10px 13px 20px;
-    width: 260px;
-  }
-  .treatmentBranch-main__item-img {
-    height: 183px;
-  }
-  .treatmentBranch-main__item-btn {
-    width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  .treatmentBranch-main__item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px 13px 20px;
     width: 150px;
   }
   .treatmentBranch-main__item-img {
     height: 97px;
+  }
+  .treatmentBranch-main__item-btn {
+    width: 100%;
   }
 }
 
