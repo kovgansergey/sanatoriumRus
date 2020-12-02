@@ -1398,6 +1398,7 @@ label.form-error-message {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
   text-align: center;
   border: 1px solid #eff2f5;
 }
@@ -1435,6 +1436,27 @@ label.form-error-message {
   height: 40px;
 }
 
+@media (max-width: 1440px) {
+  .discountsInDetail-offers__table-col:nth-child(1) {
+    width: 110px;
+  }
+  .discountsInDetail-offers__table-col:nth-child(2) {
+    width: 129px;
+  }
+  .discountsInDetail-offers__table-col:nth-child(3) {
+    width: 150px;
+  }
+  .discountsInDetail-offers__table-col:nth-child(4) {
+    width: 220px;
+  }
+  .discountsInDetail-offers__table-col:nth-child(5) {
+    width: 143px;
+  }
+  .discountsInDetail-offers__table-col:nth-child(6) {
+    width: 206px;
+  }
+}
+
 @media (max-width: 991px) {
   .discountsInDetail-main__wrap {
     flex-wrap: wrap;
@@ -1442,6 +1464,65 @@ label.form-error-message {
   .discountsInDetail-main__img {
     margin-right: 0;
     margin-bottom: 15px;
+  }
+  .discountsInDetail-offers__table-col:nth-child(1) {
+    width: 80px;
+  }
+  .discountsInDetail-offers__table-col:nth-child(2) {
+    width: 100px;
+  }
+  .discountsInDetail-offers__table-col:nth-child(3) {
+    width: 110px;
+  }
+  .discountsInDetail-offers__table-col:nth-child(4) {
+    width: 173px;
+  }
+  .discountsInDetail-offers__table-col:nth-child(5) {
+    width: 100px;
+  }
+  .discountsInDetail-offers__table-col:nth-child(6) {
+    width: 155px;
+  }
+  .discountsInDetail-offers__table-btn {
+    margin: 0 15px;
+    width: 140px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .discountsInDetail-offers__table {
+    flex-direction: row;
+  }
+  .discountsInDetail-offers__table-title {
+    flex-direction: column;
+    height: auto;
+    width: 140px;
+  }
+  .discountsInDetail-offers__table-rows {
+    display: flex;
+    overflow-x: scroll;
+    width: 398px;
+  }
+  .discountsInDetail-offers__table-row {
+    flex-direction: column;
+    width: 175px;
+    height: auto;
+  }
+  .discountsInDetail-offers__table-row:nth-child(n) {
+    background-color: transparent;
+  }
+  .discountsInDetail-offers__table-col {
+    height: 50px;
+  }
+  .discountsInDetail-offers__table-col:nth-child(n) {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .discountsInDetail-offers__table-rows {
+    width: 173px;
   }
 }
 

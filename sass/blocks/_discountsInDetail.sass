@@ -54,6 +54,7 @@
         display: flex
         justify-content: center
         align-items: center
+        height: 100%
         text-align: center
         border: 1px solid #eff2f5
         &:nth-child(1)
@@ -73,7 +74,23 @@
       &-btn
         width: 175px
         height: 40px
-// @media (max-width: 1440px)
+@media (max-width: 1440px)
+  .discountsInDetail
+    &-offers
+      &__table
+        &-col
+          &:nth-child(1)
+            width: 110px
+          &:nth-child(2)
+            width: 129px
+          &:nth-child(3)
+            width: 150px
+          &:nth-child(4)
+            width: 220px
+          &:nth-child(5)
+            width: 143px
+          &:nth-child(6)
+            width: 206px
 @media (max-width: 991px)
   .discountsInDetail
     &-main
@@ -82,5 +99,51 @@
       &__img
         margin-right: 0
         margin-bottom: 15px
-// @media (max-width: 767px)
-// @media (max-width: 576px)
+    &-offers
+      &__table
+        &-col
+          &:nth-child(1)
+            width: 80px
+          &:nth-child(2)
+            width: 100px
+          &:nth-child(3)
+            width: 110px
+          &:nth-child(4)
+            width: 173px
+          &:nth-child(5)
+            width: 100px
+          &:nth-child(6)
+            width: 155px
+        &-btn
+          margin: 0 15px
+          width: 140px
+          height: 30px
+@media (max-width: 767px)
+  .discountsInDetail
+    &-offers
+      &__table
+        flex-direction: row
+        &-title
+          flex-direction: column
+          height: auto
+          width: 140px
+        &-rows
+          display: flex
+          overflow-x: scroll
+          width: 398px
+        &-row
+          flex-direction: column
+          width: 175px
+          height: auto
+          &:nth-child(n)
+            background-color: transparent
+        &-col
+          height: 50px
+          &:nth-child(n)
+            width: 100%
+@media (max-width: 576px)
+  .discountsInDetail
+    &-offers
+      &__table
+        &-rows
+          width: 173px
