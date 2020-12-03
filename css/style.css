@@ -900,6 +900,14 @@ label.form-error-message {
   font-weight: bold;
 }
 
+.index-comments__all-comments {
+  display: block;
+  margin: 55px auto 0;
+  width: 250px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 .index-rest {
   padding-top: 145px;
   padding-bottom: 115px;
@@ -976,6 +984,10 @@ label.form-error-message {
   }
   .index-comments__item-header-title {
     font-size: 17px;
+  }
+  .index-comments__all-comments {
+    margin-top: 25px;
+    width: 205px;
   }
   .index-rest {
     padding-top: 30px;
@@ -2785,4 +2797,12 @@ label.form-error-message {
     width: 150px;
     text-align: center;
   }
+}
+
+.comments-main__new-comment-btn {
+  padding: 10px 14px;
+  width: 220px;
+  height: 61px;
+  border-radius: 31px;
+  background-color: #f5652c;
 }
