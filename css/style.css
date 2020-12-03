@@ -1658,12 +1658,121 @@ label.form-error-message {
   height: 48px;
 }
 
+.treatmentBranch-price {
+  padding-bottom: 25px;
+}
+
+.treatmentBranch-price__table {
+  display: flex;
+  margin-bottom: 50px;
+  border: 1px solid #eff2f5;
+  box-shadow: 5px 4px 6px 1px rgba(0, 7, 5, 0.1);
+}
+
+.treatmentBranch-price__table-category {
+  width: 364px;
+}
+
+.treatmentBranch-price__table-category-title {
+  height: 70px;
+  width: 100%;
+  font-weight: bold;
+  background-color: #eff2f5;
+}
+
+.treatmentBranch-price__table-category-row {
+  width: 100%;
+  height: 50px;
+}
+
+.treatmentBranch-price__table-category-col {
+  display: flex;
+  align-items: center;
+  padding: 0 35px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #eff2f5;
+}
+
+.treatmentBranch-price__table-content {
+  display: flex;
+  flex-direction: column;
+  width: 1024px;
+}
+
+.treatmentBranch-price__table-content-title {
+  display: flex;
+  height: 70px;
+  font-weight: bold;
+  background-color: #eff2f5;
+}
+
+.treatmentBranch-price__table-content-row {
+  display: flex;
+  height: 50px;
+}
+
+.treatmentBranch-price__table-content-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: 1px solid #eff2f5;
+}
+
+.treatmentBranch-price__table-content-col:nth-child(1), .treatmentBranch-price__table-content-col:nth-child(2) {
+  width: 222px;
+}
+
+.treatmentBranch-price__table-content-col:nth-child(3), .treatmentBranch-price__table-content-col:nth-child(4), .treatmentBranch-price__table-content-col:nth-child(5), .treatmentBranch-price__table-content-col:nth-child(6) {
+  width: 145px;
+}
+
+.treatmentBranch-price__btn {
+  width: 372px;
+  height: 48px;
+}
+
+@media (max-width: 1440px) {
+  .treatmentBranch-price__table-category {
+    width: 260px;
+  }
+  .treatmentBranch-price__table-category-col {
+    padding: 0 10px;
+  }
+  .treatmentBranch-price__table-content {
+    width: 698px;
+  }
+  .treatmentBranch-price__table-content-col:nth-child(1), .treatmentBranch-price__table-content-col:nth-child(2) {
+    width: 149px;
+  }
+  .treatmentBranch-price__table-content-col:nth-child(3), .treatmentBranch-price__table-content-col:nth-child(4), .treatmentBranch-price__table-content-col:nth-child(5), .treatmentBranch-price__table-content-col:nth-child(6) {
+    width: 100px;
+  }
+}
+
 @media (max-width: 991px) {
   .treatmentBranch-main__item {
     width: 345px;
   }
   .treatmentBranch-main__item-img {
     height: 238px;
+  }
+  .treatmentBranch-price__table-category {
+    width: 180px;
+  }
+  .treatmentBranch-price__table-category-col {
+    padding: 0 10px;
+  }
+  .treatmentBranch-price__table-content {
+    width: 538px;
+    overflow-x: scroll;
+  }
+  .treatmentBranch-price__table-content-title {
+    width: 698px;
+  }
+  .treatmentBranch-price__table-content-row {
+    width: 698px;
   }
 }
 
@@ -1681,6 +1790,27 @@ label.form-error-message {
   }
   .treatmentBranch-main__item-btn {
     width: 100%;
+  }
+  .treatmentBranch-price__table {
+    margin-bottom: 25px;
+  }
+  .treatmentBranch-price__table-category {
+    width: 155px;
+  }
+  .treatmentBranch-price__table-category-col {
+    padding: 0 5px;
+  }
+  .treatmentBranch-price__table-content {
+    width: 383px;
+  }
+  .treatmentBranch-price__btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .treatmentBranch-price__table-content {
+    width: 158px;
   }
 }
 
