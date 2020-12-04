@@ -248,6 +248,25 @@ try {
 
 }
 
+// слайдер на странице Отзывы
+try {
+  var commentsSlider = new Swiper('.comments-main__slider', {
+    slidesPerColumn: 4,
+    spaceBetween: 50,
+    pagination: {
+      el: '.slider-pagination-numbers',
+      bulletClass: 'slider-pagination-numbers-bullet',
+      bulletActiveClass: 'slider-pagination-numbers-bullet-active',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      }
+    },
+  });
+} catch (error) {
+  
+}
+
 // маска телефона в инпутах формы
 try {
   $('input[type=tel]').mask('+7 (000) 000-0000');

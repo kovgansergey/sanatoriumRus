@@ -114,6 +114,28 @@ a
 			background-color: $main-color
 			&-active
 				background-color: #d55623
+		&-numbers
+			position: absolute
+			bottom: 0
+			left: 0
+			z-index: 1
+			display: flex
+			&-bullet
+				display: flex
+				justify-content: center
+				align-items: center
+				margin: 0 6px
+				width: 50px
+				height: 50px
+				color: #a6a6a6
+				font-size: 25px
+				box-shadow: 5px 4px 6px 1px rgba(0, 7, 5, 0.05)
+				border-radius: 2px
+				background-color: #eff2f5
+				outline: none
+				cursor: pointer
+				&-active
+					text-decoration: underline
 .input
 	padding: 0 25px
 	border: none

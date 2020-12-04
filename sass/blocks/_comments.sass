@@ -1,16 +1,84 @@
 .comments
   &-main
+    & .container
+      position: relative
     &__new-comment-btn
       padding: 10px 14px
       width: 220px
       height: 61px
       border-radius: 31px
       background-color: $main-color
+    &__slider
+      margin-top: 50px
+      height: 1190px
+      & .swiper-slide
+        display: flex
+        justify-content: center
+        height: auto
+    &__popup
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 5
+      padding: 0 35px
+      width: 100%
+      background-color: #fff
+      border: 2px solid #eff2f5
+      box-shadow: 5px 4px 6px 1px rgba(0, 7, 5, 0.05)
+  &-form
+    &__block
+      display: flex
+    &__label
+      padding-top: 10px
+      width: 290px
+      cursor: pointer
+    &__input
+      padding: 15px 25px
+      width: 580px
+      border-radius: 5px
+      border: 1px solid #d0d0d0
+      outline: none
+      &-wrap
+        position: relative
+        margin-bottom: 40px
+      &-textarea
+        height: 120px
+    &__file
+      &-input
+        opacity: 0 
+        position: absolute 
+        z-index: -1 
+        overflow: hidden 
+        width: 0.4px 
+        height: 0.4px
+        outline: none
+        &-wrap
+          display: flex
+          flex-direction: column
+      &-label
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 20px
+        width: 185px
+        height: 35px
+        border-radius: 5px
+        border: 1px solid #949494
+        background-color: #e5e5e5
+        color: #252525
+        outline: none
+    &__rating-wrap
+      overflow: hidden
+      width: 215px
   &-card
     display: flex
     &__title
+      display: flex
+      flex-direction: column
+      align-items: center
       margin-right: 40px
     &__img
+      margin-bottom: 10px
       width: 165px
       height: 165px
       border-radius: 50%
@@ -20,6 +88,18 @@
         height: 100%
         object-fit: cover
     &__rating
+      display: inline-block
+      font-size: 0
+      & span
+        margin: 0 3px
+        padding: 0
+        font-size: 20px
+        line-height: 1
+        color: #e5e5e5
+      & > span:before
+        content: '★'
+      & > span.active
+        color: $main-color
     &__content
       width: 100%
       max-width: 1000px
@@ -38,12 +118,18 @@
         height: 65px
 @media (max-width: 991px)
   .comments
+    &-main
+      &__slider
+        height: 1000px
     &-card
       &__img
         width: 115px
         height: 115px
 @media (max-width: 767px)
   .comments
+    &-main
+      &__slider
+        height: 1580px
     &-card
       flex-direction: column
       &__title
