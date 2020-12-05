@@ -644,39 +644,52 @@
       <!-- /.slider comments-main__slider -->
       <div class="comments-main__popup">
         <h2 class="title">Оставить свой отзыв</h2>
+        <span class="comments-main__popup-close">&#10006;</span>
         <form class="comments-form">
           <div class="comments-form__block">
-            <label for="user-name" class="title comments-form__label">Ваше имя</label>
+            <div class="comments-form__label-block">
+              <label for="user-name" class="title comments-form__label">Ваше имя</label>
+            </div>
             <div class="comments-form__input-wrap">
               <input type="text" class="comments-form__input" id="user-name" name="userName" placeholder="Например: Иванов Иван Петрович">
             </div>
           </div>
           <div class="comments-form__block">
-            <label for="user-town" class="title comments-form__label">Ваш город</label>
+            <div class="comments-form__label-block">
+              <label for="user-town" class="title comments-form__label">Ваш город</label>
+            </div>
             <div class="comments-form__input-wrap">
               <input type="text" class="comments-form__input" id="user-town" name="userTown" placeholder="Например: Новосибирск">
             </div>
           </div>
           <div class="comments-form__block">
-            <label for="user-comment" class="title comments-form__label">Ваш рассказ</label>
+            <div class="comments-form__label-block">
+              <label for="user-comment" class="title comments-form__label">Ваш рассказ</label>
+            </div>
             <div class="comments-form__input-wrap">
               <textarea  class="comments-form__input comments-form__input-textarea" id="user-comment" name="userComment" placeholder="Что понравилось, а что нет"></textarea>
             </div>
           </div>
           <div class="comments-form__block">
-            <label for="user-email" class="title comments-form__label">Ваш E-mail</label>
+            <div class="comments-form__label-block">
+              <label for="user-email" class="title comments-form__label">Ваш E-mail</label>
+            </div>
             <div class="comments-form__input-wrap">
               <input type="email" class="comments-form__input" id="user-email" name="userEmail" placeholder="Например: olga@yandex.ru">
             </div>
           </div>
           <div class="comments-form__block">
-            <label for="user-social" class="title comments-form__label">Ваш профиль в соц.сетях</label>
+            <div class="comments-form__label-block">
+              <label for="user-social" class="title comments-form__label">Ваш профиль в соц.сетях</label>
+            </div>
             <div class="comments-form__input-wrap">
               <input type="url" class="comments-form__input" id="user-social" name="userSocial" placeholder="Например: vk.com/olga">
             </div>
           </div>
           <div class="comments-form__block">
-            <label for="user-file1" class="title comments-form__label">Прикрепить фото</label>
+            <div class="comments-form__label-block">
+              <label for="user-file1" class="title comments-form__label">Прикрепить фото</label>
+            </div>
             <div class="comments-form__file-input-wrap">
               <input type="file" class="comments-form__file-input" id="user-file1" name="userFile1" accept=".jpg, .jpeg, .png">
               <label for="user-file1" class="comments-form__file-label">Выберите файл</label>
@@ -687,7 +700,9 @@
             </div>
           </div>
           <div class="comments-form__block">
-            <label for="" class="title comments-form__label">Ваша оценка нам</label>
+            <div class="comments-form__label-block">
+              <label for="star-5" class="title comments-form__label">Ваша оценка нам</label>
+            </div>
             <div class="comments-form__rating-wrap">
               <input type="radio" id="star-5" name="rating" value="5">
               <label for="star-5" title="Оценка «5»"></label>	
@@ -702,7 +717,7 @@
             </div>
           </div>
           <button class="btn comments-form__btn">Отправить</button>
-          <p>Нажимая кнопку “Отправить” я соглашаюсь с условиями <a href="#" class="main-color-text">обработки персональных данных</a></p>
+          <p class="comments-form__text">Нажимая кнопку “Отправить” я&nbsp;соглашаюсь с&nbsp;условиями <a href="#" class="main-color-text">обработки&nbsp;персональных&nbsp;данных</a></p>
         </form>
       </div>
       <!-- /.comments-main__popup -->

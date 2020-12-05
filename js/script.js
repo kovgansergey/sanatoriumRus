@@ -267,6 +267,29 @@ try {
   
 }
 
+// модальное окно добавить отзыв на странице Отзывы
+try {
+  const commentsPopup = document.querySelector('.comments-main__popup'),
+    newCommentBtn = document.querySelector('.comments-main__new-comment-btn');
+
+  const closePopup = function(event) {
+    const target = event.target;
+
+    if (target.classList.contains('comments-main__popup-close')) {
+      commentsPopup.classList.remove('active');
+      commentsPopup.removeEventListener('click', closePopup);
+    }
+  };
+
+  newCommentBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    commentsPopup.classList.add('active');
+    commentsPopup.addEventListener('click', closePopup);
+  });
+} catch (error) {
+  
+}
+
 // маска телефона в инпутах формы
 try {
   $('input[type=tel]').mask('+7 (000) 000-0000');
@@ -304,6 +327,57 @@ try {
             text: 'Оператор свяжется с Вами в ближайшее время'
           });
           $(form)[0].reset();
+        },
+        error: function (response) {
+          console.error(response);
+          Swal.fire({
+            icon: 'error',
+            title: 'Что-то не так!',
+            text: 'Попробуйте еще раз позднее.',
+          });
+        }
+      });
+    }
+  });
+} catch (error) {
+  
+}
+
+// валидация формы Оставить отзыв
+try {
+  $('.comments-form').validate({
+    rules: {
+      userName: "required",
+      userTown: "required",
+      userComment: "required",
+      userEmail: {
+        required: true,
+        email: true,
+      }
+    },
+    messages: {
+      userName: "Введите имя",
+      userTown: "Введите город",
+      userComment: "Напишите пару слов",
+      userEmail: {
+        required: "Введите email",
+        email: "Не корректный email",
+      }
+    },
+    errorClass: 'form-error-message',
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "путь к файлу для отправки формы",
+        data: $(form).serialize(),
+        success: function () {
+          Swal.fire({
+            icon: 'success',
+            title: 'Заявка отправлена',
+            text: 'Оператор свяжется с Вами в ближайшее время'
+          });
+          $(form)[0].reset();
+          $(form)[0].closest('.comments-main__popup').classList.remove('active');
         },
         error: function (response) {
           console.error(response);
