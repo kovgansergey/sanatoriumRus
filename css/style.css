@@ -3103,3 +3103,57 @@ label.form-error-message {
     margin-right: 0;
   }
 }
+
+.news__title::after {
+  content: 'Новости санотория';
+}
+
+.news__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.news__item {
+  margin-bottom: 35px;
+  width: 675px;
+  border: 1px solid #eff2f5;
+  box-shadow: 5px 4px 6px 1px rgba(0, 7, 5, 0.1);
+  cursor: pointer;
+}
+
+.news__item-img {
+  width: 100%;
+  height: 304px;
+}
+
+.news__item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news__item-content {
+  padding: 0 30px;
+}
+
+.news__item-title {
+  font-weight: bold;
+}
+
+.news__item-date {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #aba9a9;
+}
+
+.news__item-date p {
+  margin-left: 10px;
+}
+
+@media (min-width: 992px) {
+  .news__item:hover .news__item-title {
+    text-decoration: underline;
+  }
+}
