@@ -296,6 +296,10 @@ label.form-error-message {
   margin-right: 10px;
 }
 
+.err404 {
+  padding-top: 100px;
+}
+
 @media (min-width: 992px) {
   .btn:hover {
     background-color: #d55623;
@@ -315,6 +319,9 @@ label.form-error-message {
   .way {
     padding-top: 80px;
     padding-bottom: 10px;
+  }
+  .err404 {
+    padding-top: 80px;
   }
 }
 
@@ -363,6 +370,9 @@ label.form-error-message {
     height: 40px;
   }
   .way {
+    padding-top: 220px;
+  }
+  .err404 {
     padding-top: 220px;
   }
 }
