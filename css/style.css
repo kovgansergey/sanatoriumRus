@@ -263,6 +263,9 @@ label.form-error-message {
 }
 
 .way {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   padding-top: 100px;
   padding-bottom: 25px;
   font-weight: bold;
@@ -274,12 +277,6 @@ label.form-error-message {
 
 .way__arrow, .way__arrow::after, .way__arrow::before {
   background-color: #b7b7b7;
-}
-
-.way__wrap {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .way__index {
@@ -2123,7 +2120,7 @@ label.form-error-message {
   background-color: #eff8ff;
 }
 
-.services-main__block:nth-child(odd) {
+.services-main__block:nth-child(even) {
   flex-direction: row-reverse;
 }
 
@@ -2180,7 +2177,7 @@ label.form-error-message {
   .services-main__block {
     flex-direction: column;
   }
-  .services-main__block:nth-child(odd) {
+  .services-main__block:nth-child(even) {
     flex-direction: column;
   }
   .services-main__block-text {

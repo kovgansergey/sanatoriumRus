@@ -373,8 +373,8 @@ try {
         success: function () {
           Swal.fire({
             icon: 'success',
-            title: 'Заявка отправлена',
-            text: 'Оператор свяжется с Вами в ближайшее время'
+            title: 'Успешно',
+            text: 'Спасибо за Ваш отзыв'
           });
           $(form)[0].reset();
           $(form)[0].closest('.comments-main__popup').classList.remove('active');

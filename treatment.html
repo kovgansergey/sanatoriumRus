@@ -17,20 +17,80 @@
 	<script src="js/script.js" defer></script>
 </head>
 <body>
-  <section class="way">
-    <div class="container">
-			<div class="way__wrap">
-				<a href="./" class="way__index">Главная</a>
-				<span class="arrow way__arrow"></span>
-				<span>Лечение</span>
+  <header class="header">
+		<div class="container">
+			<div class="header-wrap">
+				<div class="header-col header-col-links">
+					<a href="./" class="header-logo">
+						<img src="img/logo.png" alt="logo" class="header-logo__img">
+					</a>
+					<div class="header-order-wrap">
+						<a href="#" class="header-order header-booking">
+							<div class="header-order__img">
+								<img src="img/header/key.png" alt="key">
+							</div>
+							<p class="header-order__text">Онлайн<br>бронирования</p>
+						</a>
+						<a href="#" class="header-order header-calculator">
+							<div class="header-order__img">
+								<img src="img/header/calc.png" alt="calc">
+							</div>
+							<p class="header-order__text">Калькулятор<br>путёвки</p>
+						</a>
+					</div>
+				</div>
+				<!-- /.header-col -->
+				<div class="header-col header-col-phones">
+					<a href="tel:+78613350650" class="header-phone">8 (86133) 5-06-50</a>
+					<a href="tel:+78002010030" class="header-phone header-phone__free">8 (800) 201-00-30</a>
+				</div>
+				<!-- /.header-col -->
+				<div class="menu-burger"><span></span></div>
 			</div>
-    </div>
-    <!-- /.container -->
-  </section>
-  <!-- /.way -->
-  
+			<!-- /.header-wrap -->
+		</div>
+		<!-- /.container -->
+		<div class="menu">
+			<div class="container menu__wrap">
+				<a href="./" class="menu__link">Главная</a>
+				<a href="./numbers.html" class="menu__link">ПРоживание</a>
+				<a href="./price.html" class="menu__link">Цены</a>
+				<a href="./discounts.html" class="menu__link">Акции</a>
+				<a href="./treatment.html" class="menu__link">Лечение</a>
+				<a href="./allergy.html" class="menu__link">Аллергия</a>
+				<a href="./services.html" class="menu__link">Услуги</a>
+				<a href="./aboutUs.html" class="menu__link">О нас</a>
+				<a href="./contacts.html" class="menu__link">Контакты</a>
+			</div>
+		</div>
+		<!-- /.menu -->
+		<div class="container booking-form-container">
+			<form action="#" class="booking-form">
+				<p class="booking-form__title">Забронировать путёвку</p>
+				<div class="booking-form__input-block">
+					<label for="booking-form-arrival" class="booking-form__label">Заезд</label>
+					<input type="date" class="booking-form__input" id="booking-form-arrival">
+				</div>
+				<div class="booking-form__input-block">
+					<label for="booking-form-departure" class="booking-form__label">Выезд</label>
+					<input type="date" class="booking-form__input" id="booking-form-departure">
+				</div>
+				<button class="btn booking-form__btn">Найти путёвку</button>
+			</form>
+			<!-- /.booking-form -->
+		</div>
+		<!-- /.booking-form-container -->
+	</header>
+  <!-- /.header -->
+
   <section class="treatment-main">
     <div class="container">
+      <div class="way">
+        <a href="./" class="way__index">Главная</a>
+				<span class="arrow way__arrow"></span>
+				<span>Лечение</span>
+      </div>
+      <!-- /.way -->
       <h1 class="title">Какие отделения есть в санатории “Русь”</h1>
       <div class="treatment-main__wrap">
         <div class="treatment-main__item">
@@ -139,5 +199,77 @@
 		<!-- /.container -->
 	</section>
   <!-- /.index-treatment -->
+
+  <footer class="footer">
+		<div class="container">
+			<div class="footer__wrap">
+				<div class="footer__item">
+					<a href="./">
+						<img src="img/logo.png" alt="logo" class="footer__logo">
+					</a>
+				</div>
+				<!-- /.footer__item -->
+				<div class="footer__item footer__menus">
+					<div class="footer__menu">
+						<a href="./" class="footer__menu-link">Главная</a>
+						<a href="./numbers.html" class="footer__menu-link">ПРоживание</a>
+						<a href="./price.html" class="footer__menu-link">Цены</a>
+						<a href="./discounts.html" class="footer__menu-link">Акции</a>
+					</div>
+					<div class="footer__menu">
+						<a href="./treatment.html" class="footer__menu-link">Лечение</a>
+						<a href="./allergy.html" class="footer__menu-link">Аллергия</a>
+						<a href="./services.html" class="footer__menu-link">Услуги</a>
+						<a href="./contacts.html" class="footer__menu-link">Контакты</a>
+					</div>
+				</div>
+				<!-- /.footer__item -->
+				<div class="footer__item footer__info">
+					<p class="uppercase-text">ЗАО "Санаторий Русь" г. Анапа</p>
+					<p>По вопросам приобретения путевок звоните&nbsp;по&nbsp;телефонам:</p>
+					<div class="footer__free-phone">
+						<img src="img/footer/clock-img.png" alt="clock">
+						<a href="tel:+78002010030" class="footer__free-phone-number">8-800-201-00-30</a>
+					</div>
+					<div class="footer__phones">
+						<a href="tel:+78613350650">8 (86133) 5-06-50</a>
+						<span>,</span>
+						<a href="tel:+78613346987">4-69-87</a>
+						<span>,</span>
+						<a href="tel:+78613356395">5-63-95</a>
+						<span>,</span>
+						<a href="tel:+78613343448">4-34-48</a>
+						<span>,</span>
+						<a href="tel:+78613346609">4-66-09</a>
+					</div>
+					<a href="#" class="main-color-text">Политика конфидециальности</a>
+				</div>
+				<!-- /.footer__item -->
+			</div>
+			<!-- /.footer__wrap -->
+			<hr class="footer__line">
+			<div class="footer__wrap">
+				<div class="footer__item footer__rights">
+					<p>Все права защищены. Запрещено использование любых материалов с сайта без письменного разрешения владельцев.</p>
+				</div>
+				<!-- /.footer__item -->
+				<div class="footer__item footer__social">
+					<a href="#" class="footer__social-link">
+						<img src="img/footer/social-icon1.png" alt="social">
+					</a>
+					<a href="#" class="footer__social-link">
+						<img src="img/footer/social-icon2.png" alt="social">
+					</a>
+					<a href="#" class="footer__social-link">
+						<img src="img/footer/social-icon3.png" alt="social">
+					</a>
+				</div>
+				<!-- /.footer__item -->
+			</div>
+			<!-- /.footer__wrap -->
+		</div>
+		<!-- /.container -->
+	</footer>
+	<!-- /.footer -->
 </body>
 </html>
