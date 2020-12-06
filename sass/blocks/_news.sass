@@ -32,7 +32,28 @@
 @media (min-width: 992px)
   .news__item:hover .news__item-title
     text-decoration: underline
-// @media (max-width: 1440px)
-// @media (max-width: 991px)
-// @media (max-width: 767px)
-// @media (max-width: 576px)
+@media (max-width: 1440px)
+  .news
+    &__item
+      width: 465px
+      &-img
+        height: 210px
+@media (max-width: 991px)
+  .news
+    &__item
+      margin-bottom: 20px
+      width: 350px
+      &-img
+        height: 158px
+      &-content
+        padding: 0 10px
+@media (max-width: 767px)
+  .news
+    &__item
+      width: 260px
+      &-img
+        height: 117px
+@media (max-width: 576px)
+  .news
+    &__wrap
+      justify-content: center

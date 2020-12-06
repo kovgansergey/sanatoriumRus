@@ -3157,3 +3157,40 @@ label.form-error-message {
     text-decoration: underline;
   }
 }
+
+@media (max-width: 1440px) {
+  .news__item {
+    width: 465px;
+  }
+  .news__item-img {
+    height: 210px;
+  }
+}
+
+@media (max-width: 991px) {
+  .news__item {
+    margin-bottom: 20px;
+    width: 350px;
+  }
+  .news__item-img {
+    height: 158px;
+  }
+  .news__item-content {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .news__item {
+    width: 260px;
+  }
+  .news__item-img {
+    height: 117px;
+  }
+}
+
+@media (max-width: 576px) {
+  .news__wrap {
+    justify-content: center;
+  }
+}
