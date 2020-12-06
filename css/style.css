@@ -3194,3 +3194,25 @@ label.form-error-message {
     justify-content: center;
   }
 }
+
+.newsInDetail__title::after {
+  content: 'Новости санотория';
+}
+
+.newsInDetail__img {
+  width: 100%;
+}
+
+.newsInDetail__content {
+  padding: 0 30px 0 50px;
+}
+
+.newsInDetail__content-text {
+  text-indent: 20px;
+}
+
+@media (max-width: 991px) {
+  .newsInDetail__content {
+    padding: 0 10px 0 20px;
+  }
+}
