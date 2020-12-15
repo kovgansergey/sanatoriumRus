@@ -248,6 +248,42 @@ try {
 
 }
 
+// слайдеры Фотогалереи
+try {
+  var gallerySmall = new Swiper('.gallery-small-slider', {
+    // slidesPerView: 3,
+    // slidesPerColumn: 2,
+    // spaceBetween: 30,
+    // slidesPerGroup: 3,
+    slidesPerView: 2,
+    slidesPerColumn: 2,
+    spaceBetween: 15,
+    slidesPerGroup: 2,
+    pagination: {
+      el: '.slider-pagination-numbers',
+      bulletClass: 'slider-pagination-numbers-bullet',
+      bulletActiveClass: 'slider-pagination-numbers-bullet-active',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      }
+    },
+    breakpoints: {
+      577: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+      768: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 30,
+      }
+    },
+  });
+} catch (error) {
+  
+}
+
 // слайдер на странице Отзывы
 try {
   var commentsSlider = new Swiper('.comments-main__slider', {
