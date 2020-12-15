@@ -1,0 +1,92 @@
+.numbersHouse
+  &-main
+    padding-top: 160px
+    padding-bottom: 200px
+    background: url(../img/numbersHouse/main-bg.jpg) center/cover no-repeat
+    &__btn
+      width: 185px
+      height: 45px
+  &-advantages
+    padding-top: 10px
+    &__title::after
+      content: 'ПОЧЕМУ ВАМ ПОНРАВИТСЯ'
+    &__wrap
+      display: flex
+      justify-content: space-around
+      flex-wrap: wrap
+      padding: 50px 0
+      border-radius: 10px
+      background-color: #eff2f5
+    &__item
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: 305px
+      text-align: center
+      &-img
+        height: 70px
+      &-text
+        margin: 0
+  &-treatment
+    padding-top: 10px
+    &__title::after
+      content: 'ПРОЙДИТЕ ЛЕЧЕНИЕ У НАС'
+    &__wrap
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+    &__item
+      margin-bottom: 30px
+      width: 325px
+      box-shadow: 5px 4px 6px 1px rgba(0, 7, 5, 0.14)
+      background-color: #eff2f5
+      &-img
+        width: 100%
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background-color: rgba(255, 255, 255, 0.22)
+        & img
+          width: 100%
+      &-content
+        padding: 0 15px 30px
+        &-text
+          margin: 0
+@media (max-width: 1440px)
+  .numbersHouse
+    &-advantages
+      &__item
+        width: 250px
+    &-treatment
+      &__item
+        width: 300px
+@media (max-width: 991px)
+  .numbersHouse
+    &-main
+      padding-top: 80px
+      padding-bottom: 100px
+    &-treatment
+      &__item
+        margin-bottom: 15px
+@media (max-width: 767px)
+  .numbersHouse
+    &-advantages
+      &__wrap
+        padding: 5px 0 20px
+      &__item
+        margin-top: 15px
+    &-treatment
+      &__item
+        width: 260px
+@media (max-width: 576px)
+  .numbersHouse
+    &-treatment
+      &__item
+        width: 150px
+        &-content
+          padding: 0 5px 15px

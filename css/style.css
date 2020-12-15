@@ -2834,6 +2834,138 @@ label.form-error-message {
   }
 }
 
+.numbersHouse-main {
+  padding-top: 160px;
+  padding-bottom: 200px;
+  background: url(../img/numbersHouse/main-bg.jpg) center/cover no-repeat;
+}
+
+.numbersHouse-main__btn {
+  width: 185px;
+  height: 45px;
+}
+
+.numbersHouse-advantages {
+  padding-top: 10px;
+}
+
+.numbersHouse-advantages__title::after {
+  content: 'ПОЧЕМУ ВАМ ПОНРАВИТСЯ';
+}
+
+.numbersHouse-advantages__wrap {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px 0;
+  border-radius: 10px;
+  background-color: #eff2f5;
+}
+
+.numbersHouse-advantages__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 305px;
+  text-align: center;
+}
+
+.numbersHouse-advantages__item-img {
+  height: 70px;
+}
+
+.numbersHouse-advantages__item-text {
+  margin: 0;
+}
+
+.numbersHouse-treatment {
+  padding-top: 10px;
+}
+
+.numbersHouse-treatment__title::after {
+  content: 'ПРОЙДИТЕ ЛЕЧЕНИЕ У НАС';
+}
+
+.numbersHouse-treatment__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.numbersHouse-treatment__item {
+  margin-bottom: 30px;
+  width: 325px;
+  box-shadow: 5px 4px 6px 1px rgba(0, 7, 5, 0.14);
+  background-color: #eff2f5;
+}
+
+.numbersHouse-treatment__item-img {
+  width: 100%;
+  position: relative;
+}
+
+.numbersHouse-treatment__item-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
+.numbersHouse-treatment__item-img img {
+  width: 100%;
+}
+
+.numbersHouse-treatment__item-content {
+  padding: 0 15px 30px;
+}
+
+.numbersHouse-treatment__item-content-text {
+  margin: 0;
+}
+
+@media (max-width: 1440px) {
+  .numbersHouse-advantages__item {
+    width: 250px;
+  }
+  .numbersHouse-treatment__item {
+    width: 300px;
+  }
+}
+
+@media (max-width: 991px) {
+  .numbersHouse-main {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+  .numbersHouse-treatment__item {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .numbersHouse-advantages__wrap {
+    padding: 5px 0 20px;
+  }
+  .numbersHouse-advantages__item {
+    margin-top: 15px;
+  }
+  .numbersHouse-treatment__item {
+    width: 260px;
+  }
+}
+
+@media (max-width: 576px) {
+  .numbersHouse-treatment__item {
+    width: 150px;
+  }
+  .numbersHouse-treatment__item-content {
+    padding: 0 5px 15px;
+  }
+}
+
 .comments-main .container {
   position: relative;
 }
