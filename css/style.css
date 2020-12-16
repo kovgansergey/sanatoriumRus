@@ -359,6 +359,66 @@ label.form-error-message {
   height: 48px;
 }
 
+.booking-online-dialog {
+  padding: 30px 0;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.booking-online-dialog .title {
+  text-align: center;
+}
+
+.booking-online-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking-online-form__row {
+  display: flex;
+  justify-content: center;
+}
+
+.booking-online-form__input {
+  width: 100%;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.booking-online-form__input-wrap {
+  margin: 0 10px 20px;
+}
+
+.booking-online-form__input-block {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  padding: 8px 20px;
+  width: 372px;
+  height: 40px;
+  font-size: 15px;
+  background-color: #eff2f5;
+}
+
+.booking-online-form__label {
+  margin-right: 5px;
+  background-color: transparent;
+}
+
+.booking-online-form__label-out {
+  color: #7d7d7d;
+}
+
+.booking-online-form__btn {
+  margin-top: 20px;
+  width: 258px;
+  height: 39px;
+}
+
 @media (min-width: 992px) {
   .btn:hover {
     background-color: #d55623;
