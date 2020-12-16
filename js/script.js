@@ -56,6 +56,43 @@ try {
   console.error(error);
 }
 
+// модальное окно Калькулятора путевки
+try {
+  const headerCalculator = document.querySelector('.header-calculator'),
+    calculatorPopup = document.querySelector('.calculator-popup'),
+    dateArrival = calculatorPopup.querySelector('.dateArrival');
+
+  const checkNum = function (number) {
+    return number <= 9 ? '0' + number : number;
+  };
+
+  headerCalculator.addEventListener('click', (event) => {
+    event.preventDefault();
+    const today = new Date();
+    dateArrival.min = `${today.getFullYear()}-${checkNum(today.getMonth() + 1)}-${checkNum(today.getDate())}`;
+    calculatorPopup.classList.add('active');
+  });
+
+  calculatorPopup.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!target.closest('.calculator-dialog')) {
+      calculatorPopup.classList.remove('active');
+    }
+  });
+} catch (error) {
+  
+}
+
+// закрытие окна благодарности
+try {
+  const thanksBtn = document.querySelector('.thanks-btn');
+  thanksBtn.addEventListener('click', () => {
+    thanksBtn.closest('.thanks-popup').classList.remove('active');
+  });
+} catch (error) {
+  
+}
+
 // слайдер с предложениями на главной странице
 try {
   var indexOfferSlider = new Swiper('.index-offer__slider', {
@@ -377,20 +414,11 @@ try {
         url: "путь к файлу для отправки формы",
         data: $(form).serialize(),
         success: function () {
-          Swal.fire({
-            icon: 'success',
-            title: 'Заявка отправлена',
-            text: 'Оператор свяжется с Вами в ближайшее время'
-          });
+          document.querySelector('.thanks-popup').classList.add('active');
           $(form)[0].reset();
         },
         error: function (response) {
           console.error(response);
-          Swal.fire({
-            icon: 'error',
-            title: 'Что-то не так!',
-            text: 'Попробуйте еще раз позднее.',
-          });
         }
       });
     }
@@ -427,21 +455,55 @@ try {
         url: "путь к файлу для отправки формы",
         data: $(form).serialize(),
         success: function () {
-          Swal.fire({
-            icon: 'success',
-            title: 'Успешно',
-            text: 'Спасибо за Ваш отзыв'
-          });
+          document.querySelector('.thanks-popup').classList.add('active');
           $(form)[0].reset();
           $(form)[0].closest('.comments-main__popup').classList.remove('active');
         },
         error: function (response) {
           console.error(response);
-          Swal.fire({
-            icon: 'error',
-            title: 'Что-то не так!',
-            text: 'Попробуйте еще раз позднее.',
-          });
+        }
+      });
+    }
+  });
+} catch (error) {
+  
+}
+
+// валидация формы Калькулятор путевки
+try {
+  $('.calculator-form').validate({
+    rules: {
+      userName: "required",
+      userPhone: {
+        required: true,
+        minlength: 17
+      },
+      quantityGuests: "required",
+      quantityDays: "required",
+      dateArrival: "required",
+    },
+    messages: {
+      userName: "Введите имя",
+      userPhone: {
+        required: 'Введите телефон',
+        minlength: 'Не корректный номер'
+      },
+      quantityGuests: "Введите количество гостей",
+      quantityDays: "Введите количество дней",
+      dateArrival: "Введите дату заезда",
+    },
+    errorClass: 'form-error-message',
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "путь к файлу для отправки формы",
+        data: $(form).serialize(),
+        success: function () {
+          document.querySelector('.thanks-popup').classList.add('active');
+          $(form)[0].reset();
+        },
+        error: function (response) {
+          console.error(response);
         }
       });
     }

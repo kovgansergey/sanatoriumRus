@@ -193,6 +193,52 @@ label.form-error-message
 			margin-right: 10px
 .err404
 	padding-top: 100px
+.popup
+	display: flex
+	justify-content: center
+	align-items: center
+	position: fixed
+	top: 0
+	left: -150%
+	z-index: 50
+	width: 100vw
+	height: 100vh
+	background-color: rgba(244, 246, 248, 0.68)
+	&.active
+		left: 0
+.thanks
+	&-dialog
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		width: 600px
+		height: 540px
+		border-radius: 10px
+		background-color: #fff
+		text-align: center
+	&-btn
+		width: 235px
+		height: 50px
+.calculator
+	&-dialog
+		width: 600px
+		padding: 30px 60px
+		border-radius: 10px
+		background-color: #fff
+		text-align: center
+	&-form
+		&__input
+			width: 100%
+			height: 64px
+			border-radius: 3px
+			background-color: #eff2f5
+			&-block
+				margin-top: 20px
+		&__btn
+			margin-top: 30px
+			width: 100%
+			height: 48px
 @media (min-width: 992px)
 	.btn
 		&:hover
@@ -247,9 +293,27 @@ label.form-error-message
 		padding-top: 220px
 	.err404
 		padding-top: 220px
+	.popup
+		overflow: scroll
+	.thanks
+		&-dialog
+			width: 300px
+			height: 270px
+	.calculator-popup
+		align-items: flex-start
 @media (max-width: 767px)
 	.container
 		width: 540px
+	.calculator
+		&-dialog
+			padding: 15px
+			width: 520px
+		&-form
+			&__input
+				height: 40px
 @media (max-width: 576px)
 	.container
 		max-width: 315px
+	.calculator
+		&-dialog
+			width: 310px
