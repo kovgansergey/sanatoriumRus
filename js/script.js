@@ -250,11 +250,9 @@ try {
 
 // слайдеры Фотогалереи
 try {
+  const galleryBigSliderPopup = document.querySelector('.gallery-big-slider-popup');
+
   var gallerySmall = new Swiper('.gallery-small-slider', {
-    // slidesPerView: 3,
-    // slidesPerColumn: 2,
-    // spaceBetween: 30,
-    // slidesPerGroup: 3,
     slidesPerView: 2,
     slidesPerColumn: 2,
     spaceBetween: 15,
@@ -279,6 +277,28 @@ try {
         spaceBetween: 30,
       }
     },
+  });
+
+  var galleryBig = new Swiper('.gallery-big-slider', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  gallerySmall.on('click', (event) => {
+    const index = event.clickedIndex;
+    if (typeof index === 'number') {
+      galleryBig.slideTo(index, 0);
+      galleryBigSliderPopup.classList.add('active');
+    }
+  });
+
+  galleryBigSliderPopup.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!target.closest('.gallery-big-slider-dialog') || target.classList.contains('gallery-big-slider-popup__close')) {
+      galleryBigSliderPopup.classList.remove('active');
+    }
   });
 } catch (error) {
   
