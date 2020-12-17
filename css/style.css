@@ -307,14 +307,18 @@ label.form-error-message {
   position: fixed;
   top: 0;
   left: -150%;
-  z-index: 50;
   width: 100vw;
   height: 100vh;
+  overflow: scroll;
   background-color: rgba(244, 246, 248, 0.68);
 }
 
 .popup.active {
   left: 0;
+}
+
+.thanks-popup {
+  z-index: 50;
 }
 
 .thanks-dialog {
@@ -332,6 +336,10 @@ label.form-error-message {
 .thanks-btn {
   width: 235px;
   height: 50px;
+}
+
+.calculator-popup {
+  z-index: 30;
 }
 
 .calculator-dialog {
@@ -359,7 +367,12 @@ label.form-error-message {
   height: 48px;
 }
 
+.booking-online-popup {
+  z-index: 30;
+}
+
 .booking-online-dialog {
+  position: relative;
   padding: 30px 0;
   width: 100%;
   border-radius: 10px;
@@ -379,6 +392,7 @@ label.form-error-message {
 .booking-online-form__row {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .booking-online-form__input {
@@ -413,10 +427,44 @@ label.form-error-message {
   color: #7d7d7d;
 }
 
+.booking-online-form__select {
+  width: 100%;
+  height: 40px;
+  background: transparent url("../img/interface/select-arrow.png") no-repeat right;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.booking-online-form__select option {
+  background-color: #eff2f5;
+}
+
 .booking-online-form__btn {
   margin-top: 20px;
   width: 258px;
   height: 39px;
+}
+
+.booking-online-numbers {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+}
+
+.booking-online-numbers.active {
+  display: block;
+}
+
+.booking-online-numbers .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.booking-online-numbers .numbers__card {
+  margin-bottom: 20px;
 }
 
 @media (min-width: 992px) {
@@ -494,15 +542,15 @@ label.form-error-message {
   .err404 {
     padding-top: 220px;
   }
-  .popup {
-    overflow: scroll;
-  }
   .thanks-dialog {
     width: 300px;
     height: 270px;
   }
-  .calculator-popup {
+  .popup {
     align-items: flex-start;
+  }
+  .booking-online-numbers .container {
+    justify-content: space-around;
   }
 }
 
@@ -516,6 +564,9 @@ label.form-error-message {
   }
   .calculator-form__input {
     height: 40px;
+  }
+  .booking-online-form__input-block {
+    width: 258px;
   }
 }
 
@@ -2724,6 +2775,11 @@ label.form-error-message {
 
 .numbers__card-content-price img {
   margin-right: 9px;
+}
+
+.numbers__card-btn {
+  width: 100%;
+  height: 47px;
 }
 
 .numbers__card::before {

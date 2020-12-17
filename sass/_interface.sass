@@ -200,13 +200,15 @@ label.form-error-message
 	position: fixed
 	top: 0
 	left: -150%
-	z-index: 50
 	width: 100vw
 	height: 100vh
+	overflow: scroll
 	background-color: rgba(244, 246, 248, 0.68)
 	&.active
 		left: 0
 .thanks
+	&-popup
+		z-index: 50
 	&-dialog
 		display: flex
 		flex-direction: column
@@ -221,6 +223,8 @@ label.form-error-message
 		width: 235px
 		height: 50px
 .calculator
+	&-popup
+		z-index: 30
 	&-dialog
 		width: 600px
 		padding: 30px 60px
@@ -240,7 +244,10 @@ label.form-error-message
 			width: 100%
 			height: 48px
 .booking-online
+	&-popup
+		z-index: 30
 	&-dialog
+		position: relative
 		padding: 30px 0
 		width: 100%
 		border-radius: 10px
@@ -254,6 +261,7 @@ label.form-error-message
 		&__row
 			display: flex
 			justify-content: center
+			flex-wrap: wrap
 		&__input
 			width: 100%
 			font-weight: bold
@@ -276,10 +284,32 @@ label.form-error-message
 			background-color: transparent
 			&-out
 				color: #7d7d7d
+		&__select
+			width: 100%
+			height: 40px
+			background: transparent url('../img/interface/select-arrow.png') no-repeat right
+			border: none
+			outline: none
+			-webkit-appearance: none
+			& option
+				background-color: #eff2f5
 		&__btn
 			margin-top: 20px
 			width: 258px
 			height: 39px
+	&-numbers
+		display: none
+		position: absolute
+		top: 110%
+		left: 0
+		&.active
+			display: block
+		& .container
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+		& .numbers__card
+			margin-bottom: 20px
 @media (min-width: 992px)
 	.btn
 		&:hover
@@ -334,14 +364,16 @@ label.form-error-message
 		padding-top: 220px
 	.err404
 		padding-top: 220px
-	.popup
-		overflow: scroll
 	.thanks
 		&-dialog
 			width: 300px
 			height: 270px
-	.calculator-popup
+	.popup
 		align-items: flex-start
+	.booking-online
+		&-numbers
+			& .container
+				justify-content: space-around
 @media (max-width: 767px)
 	.container
 		width: 540px
@@ -352,6 +384,11 @@ label.form-error-message
 		&-form
 			&__input
 				height: 40px
+	.booking-online
+		&-form
+			&__input
+				&-block
+					width: 258px
 @media (max-width: 576px)
 	.container
 		max-width: 315px

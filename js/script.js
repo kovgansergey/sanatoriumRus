@@ -20,10 +20,12 @@ try {
   console.error(error);
 }
 
-// скрипт для дат в форме брони путевки
+// скрипт для дат в форме брони путевки и в модальном окне Онлайн бронирования
 try {
   const bookingFormArrival = document.getElementById('booking-form-arrival'),
     bookingFormDeparture = document.getElementById('booking-form-departure'),
+    bookingOnlineFormArrival = document.getElementById('booking-online-form-arrival'),
+    bookingOnlineFormDeparture = document.getElementById('booking-online-form-departure'),
     today = new Date(),
     tomorrow = new Date(today.getTime() + 86400000);
 
@@ -36,9 +38,13 @@ try {
   bookingFormArrival.min = `${today.getFullYear()}-${checkNum(today.getMonth() + 1)}-${checkNum(today.getDate())}`;
   bookingFormDeparture.value = `${tomorrow.getFullYear()}-${checkNum(tomorrow.getMonth() + 1)}-${checkNum(tomorrow.getDate())}`;
   bookingFormDeparture.min = `${tomorrow.getFullYear()}-${checkNum(tomorrow.getMonth() + 1)}-${checkNum(tomorrow.getDate())}`;
+  bookingOnlineFormArrival.value = `${today.getFullYear()}-${checkNum(today.getMonth() + 1)}-${checkNum(today.getDate())}`;
+  bookingOnlineFormArrival.min = `${today.getFullYear()}-${checkNum(today.getMonth() + 1)}-${checkNum(today.getDate())}`;
+  bookingOnlineFormDeparture.value = `${tomorrow.getFullYear()}-${checkNum(tomorrow.getMonth() + 1)}-${checkNum(tomorrow.getDate())}`;
+  bookingOnlineFormDeparture.min = `${tomorrow.getFullYear()}-${checkNum(tomorrow.getMonth() + 1)}-${checkNum(tomorrow.getDate())}`;
 
   // функция изменения мин.даты выезда при изменении даты заезда
-  const changeDates = function(event) {
+  const changeDatesBooking = function(event) {
     const newDate = new Date(event.target.value),
       minDate = new Date(bookingFormArrival.min);
     tomorrow.setTime(newDate.getTime() + 86400000);
@@ -51,7 +57,23 @@ try {
     }
   };
 
-  bookingFormArrival.addEventListener('input', changeDates);
+  const changeDatesBookingOnline = function (event) {
+    const newDate = new Date(event.target.value),
+      minDate = new Date(bookingOnlineFormArrival.min);
+    tomorrow.setTime(newDate.getTime() + 86400000);
+
+    if (newDate.getTime() < minDate.getTime()) {
+      return;
+    }
+
+    bookingOnlineFormDeparture.min = `${tomorrow.getFullYear()}-${checkNum(tomorrow.getMonth() + 1)}-${checkNum(tomorrow.getDate())}`;
+    if (bookingOnlineFormDeparture.value < bookingOnlineFormDeparture.min) {
+      bookingOnlineFormDeparture.value = bookingOnlineFormDeparture.min;
+    }
+  };
+
+  bookingFormArrival.addEventListener('input', changeDatesBooking);
+  bookingOnlineFormArrival.addEventListener('input', changeDatesBookingOnline);
 } catch (error) {
   console.error(error);
 }
@@ -71,12 +93,36 @@ try {
     const today = new Date();
     dateArrival.min = `${today.getFullYear()}-${checkNum(today.getMonth() + 1)}-${checkNum(today.getDate())}`;
     calculatorPopup.classList.add('active');
+    document.body.style.overflow = "hidden";
   });
 
   calculatorPopup.addEventListener('click', (event) => {
     const target = event.target;
     if (!target.closest('.calculator-dialog')) {
       calculatorPopup.classList.remove('active');
+      document.body.style.overflow = "";
+    }
+  });
+} catch (error) {
+  
+}
+
+// модальное окно Онлайн бронирования
+try {
+  const headerBooking = document.querySelector('.header-booking'),
+    bookingOnlinePopup = document.querySelector('.booking-online-popup');
+
+  headerBooking.addEventListener('click', (event) => {
+    event.preventDefault();
+    bookingOnlinePopup.classList.add('active');
+    document.body.style.overflow = "hidden";
+  });
+
+  bookingOnlinePopup.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!target.closest('.booking-online-dialog')) {
+      bookingOnlinePopup.classList.remove('active');
+      document.body.style.overflow = "";
     }
   });
 } catch (error) {

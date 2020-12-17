@@ -67,11 +67,11 @@
 				<p class="booking-form__title">Забронировать путёвку</p>
 				<div class="booking-form__input-block">
 					<label for="booking-form-arrival" class="booking-form__label">Заезд</label>
-					<input type="date" class="booking-form__input" id="booking-form-arrival">
+					<input type="date" class="booking-form__input" id="booking-form-arrival" name="bookingArrival">
 				</div>
 				<div class="booking-form__input-block">
 					<label for="booking-form-departure" class="booking-form__label">Выезд</label>
-					<input type="date" class="booking-form__input" id="booking-form-departure">
+					<input type="date" class="booking-form__input" id="booking-form-departure" name="bookingDeparture">
 				</div>
 				<button class="btn booking-form__btn">Найти путёвку</button>
 			</form>
@@ -480,24 +480,24 @@
 	</div>
 	<!-- /.popup calculator-popup -->
 
-	<div class="popup booking-online-popup active">
+	<div class="popup booking-online-popup">
 		<div class="container">
 			<div class="booking-online-dialog">
-				<h2 class="title">Выберите даты заезда, выезда и количество гостей</h2>
+				<h2 class="title">Выберите даты заезда, выезда и&nbsp;количество гостей</h2>
 				<form action="#" class="booking-online-form">
 					<div class="booking-online-form__row">
 						<div class="booking-online-form__input-wrap">
 							<label for="booking-online-form-arrival" class="booking-online-form__label-out">Дата заезда</label>
 							<div class="input-block booking-online-form__input-block">
 								<label for="booking-online-form-arrival" class="booking-online-form__label">Заезд</label>
-								<input type="date" class="booking-online-form__input" id="booking-online-form-arrival">
+								<input type="date" class="booking-online-form__input" id="booking-online-form-arrival" name="bookingOnlineArrival">
 							</div>
 						</div>
 						<div class="booking-online-form__input-wrap">
 							<label for="booking-online-form-departure" class="booking-online-form__label-out">Дата выезда</label>
 							<div class="input-block booking-online-form__input-block">
 								<label for="booking-online-form-departure" class="booking-online-form__label">Выезд</label>
-								<input type="date" class="booking-online-form__input" id="booking-online-form-departure">
+								<input type="date" class="booking-online-form__input" id="booking-online-form-departure" name="bookingOnlineDeparture">
 							</div>
 						</div>
 					</div>
@@ -507,22 +507,118 @@
 							<div class="input-block booking-online-form__input-block">
 								<select name="accommodation" id="booking-online-form-accommodation" class="booking-online-form__select">
 									<option value="1adult">1 взрослый</option>
-									<option value="2adult">2 взрослый</option>
-									<option value="3adult">3 взрослый</option>
-									<option value="4adult">4 взрослый</option>
+									<option value="2adult">2 взрослых</option>
+									<option value="3adult">3 взрослых</option>
+									<option value="4adult">4 взрослых</option>
 								</select>
 							</div>
 						</div>
 						<div class="booking-online-form__input-wrap">
-							<label for="" class="booking-online-form__label-out">Добавить детей</label>
+							<label for="booking-online-form-children" class="booking-online-form__label-out">Добавить детей</label>
 							<div class="input-block booking-online-form__input-block">
-								
+								<select name="children" id="booking-online-form-children" class="booking-online-form__select">
+									<option value="1child">1 ребенок до года</option>
+									<option value="2child">2 ребенка до года</option>
+									<option value="3child">3 ребенка до года</option>
+									<option value="4child">4 ребенка до года</option>
+								</select>
 							</div>
 						</div>
 					</div>
 					<button class="btn booking-online-form__btn">Найти</button>
 				</form>
 				<!-- /.booking-online-form -->
+
+				<div class="booking-online-numbers active">
+					<div class="container">
+						<div class="numbers__card">
+							<div class="numbers__card-img">
+								<img src="img/numbers/cards/card-img1.jpg" alt="img">
+							</div>
+							<div class="numbers__card-content">
+								<p class="title bold-text">2-х местный номер "Джуниор сюит"</p>
+								<div class="numbers__card-content-row numbers__card-content-square">
+									<img src="img/numbers/square-icon.png" alt="icon">
+									<p>25 кв.м.</p>
+								</div>
+								<div class="numbers__card-content-row numbers__card-content-person">
+									<img src="img/numbers/person-icon.png" alt="icon">
+									<p>для 2-х взрослых</p>
+								</div>
+								<div class="numbers__card-content-row numbers__card-content-price">
+									<img src="img/numbers/price-icon.png" alt="icon">
+									<p>от 3550 руб.</p>
+								</div>
+								<button class="btn numbers__card-btn">Забронировать номер</button>
+							</div>
+						</div>
+						<div class="numbers__card">
+							<div class="numbers__card-img">
+								<img src="img/numbers/cards/card-img1.jpg" alt="img">
+							</div>
+							<div class="numbers__card-content">
+								<p class="title bold-text">2-х местный номер "Джуниор сюит"</p>
+								<div class="numbers__card-content-row numbers__card-content-square">
+									<img src="img/numbers/square-icon.png" alt="icon">
+									<p>25 кв.м.</p>
+								</div>
+								<div class="numbers__card-content-row numbers__card-content-person">
+									<img src="img/numbers/person-icon.png" alt="icon">
+									<p>для 2-х взрослых</p>
+								</div>
+								<div class="numbers__card-content-row numbers__card-content-price">
+									<img src="img/numbers/price-icon.png" alt="icon">
+									<p>от 3550 руб.</p>
+								</div>
+								<button class="btn numbers__card-btn">Забронировать номер</button>
+							</div>
+						</div>
+						<div class="numbers__card">
+							<div class="numbers__card-img">
+								<img src="img/numbers/cards/card-img1.jpg" alt="img">
+							</div>
+							<div class="numbers__card-content">
+								<p class="title bold-text">2-х местный номер "Джуниор сюит"</p>
+								<div class="numbers__card-content-row numbers__card-content-square">
+									<img src="img/numbers/square-icon.png" alt="icon">
+									<p>25 кв.м.</p>
+								</div>
+								<div class="numbers__card-content-row numbers__card-content-person">
+									<img src="img/numbers/person-icon.png" alt="icon">
+									<p>для 2-х взрослых</p>
+								</div>
+								<div class="numbers__card-content-row numbers__card-content-price">
+									<img src="img/numbers/price-icon.png" alt="icon">
+									<p>от 3550 руб.</p>
+								</div>
+								<button class="btn numbers__card-btn">Забронировать номер</button>
+							</div>
+						</div>
+						<div class="numbers__card">
+							<div class="numbers__card-img">
+								<img src="img/numbers/cards/card-img1.jpg" alt="img">
+							</div>
+							<div class="numbers__card-content">
+								<p class="title bold-text">2-х местный номер "Джуниор сюит"</p>
+								<div class="numbers__card-content-row numbers__card-content-square">
+									<img src="img/numbers/square-icon.png" alt="icon">
+									<p>25 кв.м.</p>
+								</div>
+								<div class="numbers__card-content-row numbers__card-content-person">
+									<img src="img/numbers/person-icon.png" alt="icon">
+									<p>для 2-х взрослых</p>
+								</div>
+								<div class="numbers__card-content-row numbers__card-content-price">
+									<img src="img/numbers/price-icon.png" alt="icon">
+									<p>от 3550 руб.</p>
+								</div>
+								<button class="btn numbers__card-btn">Забронировать номер</button>
+							</div>
+						</div>
+					</div>
+					<!-- /.container -->
+				</div>
+				<!-- /.booking-online-numbers -->
 			</div>
 			<!-- /.booking-online-dialog -->
 		</div>
